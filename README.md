@@ -8,7 +8,7 @@ Here we provide a set of command line interfaces to the iRec library with comple
 
 Clone the repository:
 
-  git clone https://github.com/irec-org/irec-cmdline/
+    git clone https://github.com/irec-org/irec-cmdline/
 
 Install iRec with pip:
 
