@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Here we provide a set of command line interfaces to the iRec library with complete integration to MLflow.
+iRec-cmdline contains a set of command line interfaces to the iRec library with complete integration to MLflow. This configuration is ready to use and serves as the next-generation environment for interactive recommender system researches.
 
 ## Install
 
