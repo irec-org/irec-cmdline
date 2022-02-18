@@ -53,13 +53,21 @@ For more details on configuration files, go to [**configuration_files**](tutoria
 This configuration file stores all the configurations related to the bases that will be used during the execution of an experiment.
 
 ```yaml
-'MovieLens 10M':
-  DefaultValidationDatasetLoader:
-    dataset_path: ./data/datasets/MovieLens 10M/
-    train_size: 0.8
-    test_consumes: 1
-    crono: False
-    random_seed: 0
+'MovieLens 1M':
+  DefaultDatasetLoader:
+    dataset_path: ./data/datasets/MovieLens 1M/
+    prefiltering:
+      test_consumes: 5
+      #filter_users:
+      #  min_consumption: 50
+      #  num_users: 100
+      #filter_items: 
+      #  min_ratings: 1
+      #  num_items: 100
+    splitting:
+      strategy: temporal
+      #random_seed: 0 (for splitting: random)
+      train_size: 0.8
 ︙
 ```
 
@@ -68,20 +76,29 @@ This configuration file stores all the configurations related to the bases that 
 This configuration file stores the settings of the agents (Recommenders) that will be used in the experiments.
 
 ```yaml
-'MovieLens 10M':
-  LinearUCB:
+'MovieLens 1M':
+  EGreedy:
+    SimpleAgent:
+      action_selection_policy:
+        ASPEGreedy:
+          epsilon: 0.1
+      value_function:
+        EGreedy: {}
+  UCB:
     SimpleAgent:
       action_selection_policy:
         ASPGreedy: {}
       value_function:
-        LinearUCB:
-          alpha: 1.0
-          item_var: 0.01
-          iterations: 20
-          num_lat: 20
-          stop_criteria: 0.0009
-          user_var: 0.01
-          var: 0.05
+        UCB:
+          c: 0.25
+  ThompsonSampling:
+    SimpleAgent:
+      action_selection_policy:
+        ASPGreedy: {}
+      value_function:
+        ThompsonSampling:
+          alpha_0: 1
+          beta_0: 100
  ︙
 ```
 
@@ -103,10 +120,13 @@ PTS:
 The evaluation policies are defined in this configuration file. To conduct an experiment, we need to define how the recommendation process will be executed and the user-item interactions. We specify these settings in this file according to the experiment's objectives.
 
 ```yaml
-Interaction:
+FixedInteraction:
   num_interactions: 100
   interaction_size: 1
-  save_info: False
+  save_info: True
+#UserDrivenInteractions:
+ # interaction_size: 1
+  # recommend_test_data_rate_limit: 0.1
 ︙
 ```
 
