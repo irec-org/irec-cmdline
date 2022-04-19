@@ -14,7 +14,7 @@ args = parser.parse_args()
 
 # settings = utils.load_settings(dirname(realpath(__file__)))
 dataset_agents_parameters = yaml.load(open("./settings/dataset_agents.yaml"),Loader=yaml.SafeLoader)
-# settings = yaml.load("./settings/",Loader=yaml.SafeLoader)
+# settings = yaml.loader("./settings/",Loader=yaml.SafeLoader)
 settings = utils.load_settings(dirname(realpath(__file__)))
 
 parameters_agents_symbols = {
@@ -68,7 +68,7 @@ parameters_agents_symbols = {
           'num_lat':'num\_lat',
           'num_particles':'$B$',
         },
-    "cluster_bandit": {
+    "CB": {
           'B': 'B',
           'C': 'C',
           'D': 'C',

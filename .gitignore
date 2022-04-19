@@ -7,13 +7,6 @@ __pycache__/
 *.so
 
 # Distribution / packaging
-
-
-app/data/
-app/mlruns/
-app/__pycache__/
-app/tmp/
-
 .Python
 build/
 develop-eggs/

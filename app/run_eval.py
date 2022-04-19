@@ -14,10 +14,10 @@ import numpy as np
 import yaml
 
 import irec.evaluation_policies
-import irec.agents.value_functions.matrix_factorization
-import irec.agents.value_functions
+import irec.mf
+import irec.value_functions
 from app import constants
-from irec.environment.dataset import Dataset
+from irec.utils.dataset import Dataset
 import argparse
 import pickle
 

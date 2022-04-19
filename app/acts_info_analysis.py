@@ -4,15 +4,17 @@ import os
 sys.path.append(dirname(realpath(__file__)) + sep + pardir)
 
 from mlflow.tracking import MlflowClient
-from irec.environment.dataset import Dataset
+from irec.utils.dataset import Dataset
 import scipy.sparse
 import irec.metrics
 import pandas as pd
 import numpy as np
-from irec.agents.simple_ensemble_agent import SimpleEnsembleAgent
+import irec.agents
+import inquirer
 import argparse
-import irec.agents.value_functions.matrix_factorization
+import irec.mf
 import mlflow
+import metrics
 import pickle
 import ctypes
 import utils
@@ -71,7 +73,7 @@ for dataset_loader_name in args.dataset_loaders:
         for i in range(len(acts_info)):
             uid = users_items_recommended[i][0]
             iid = users_items_recommended[i][1]
-            if isinstance(agent,SimpleEnsembleAgent):
+            if isinstance(agent,irec.agents.SimpleEnsembleAgent):
                 data.append({
                     **acts_info[i],
                     **{
@@ -87,7 +89,7 @@ for dataset_loader_name in args.dataset_loaders:
                         consumption_matrix[uid, iid],]
                 )
 
-        if isinstance(agent,SimpleEnsembleAgent):
+        if isinstance(agent,irec.agents.SimpleEnsembleAgent):
             df_results = pd.DataFrame(data)
             results = df_results.groupby(['user_interaction', 'meta_action_name'])['trial'].agg(['count'])
             print(results)
