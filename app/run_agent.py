@@ -5,6 +5,7 @@ import os
 import sys
 
 from mlflow.tracking.client import MlflowClient
+from traitlets.traitlets import default
 
 import mlflow
 from app import constants
@@ -13,7 +14,7 @@ import yaml
 from concurrent.futures import ProcessPoolExecutor, wait, FIRST_COMPLETED
 from app import utils
 
-import irec.value_functions
+import irec.agents.value_functions
 import irec.evaluation_policies
 import argparse
 import time
