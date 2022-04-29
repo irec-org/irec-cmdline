@@ -6,7 +6,7 @@ sys.path.append(dirname(realpath(__file__)) + sep + pardir)
 from mlflow.tracking import MlflowClient
 from irec.environment.dataset import Dataset
 import scipy.sparse
-import irec.metrics
+import irec.offline_experiments.metrics
 import pandas as pd
 import numpy as np
 from irec.agents.simple_ensemble_agent import SimpleEnsembleAgent

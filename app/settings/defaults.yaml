@@ -6,7 +6,7 @@ dataset_loader: 'MovieLens 100k O'
 evaluation_experiment: evaluation
 evaluation_policy: FixedInteraction
 metric: Hits
-metric_evaluator: UserCumulativeInteractionMetricEvaluator
+metric_evaluator: UserCumulativeInteraction
 pdf_dir: pdf/
 tex_dir: tex/
 general_dir: general/

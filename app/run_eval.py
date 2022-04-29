@@ -7,7 +7,7 @@ sys.path.append(dirname(realpath(__file__)) + sep + pardir)
 
 from concurrent.futures import FIRST_COMPLETED, ProcessPoolExecutor, wait
 from app import utils
-import irec.metrics
+import irec.offline_experiments.metrics
 
 # from irec.utils.InteractorCache import InteractorCache
 import numpy as np

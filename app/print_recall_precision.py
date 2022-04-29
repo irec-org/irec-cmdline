@@ -45,7 +45,7 @@ from irec.metric_evaluators import (
     UserCumulativeInteractionMetricEvaluator,
 )
 from irec.environment.dataset import Dataset
-from irec import metrics
+from irec.offline_experiments import metrics
 import matplotlib.pyplot as plt
 from cycler import cycler
 from collections import defaultdict
