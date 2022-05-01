@@ -29,7 +29,7 @@ import utils
 import pandas as pd
 
 sys.path.append(dirname(realpath(__file__)) + sep + pardir + sep + "irec")
-from app import constants
+from app.scripts.others import constants
 
 from app import utils
 import scipy

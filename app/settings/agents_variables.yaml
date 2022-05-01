@@ -25,27 +25,85 @@
 #   var_v: 0.6
 
 GridSearch:
+
   - EGreedy:
+      SimpleAgent:
+        action_selection_policy:
+          ASPEGreedy:
+            epsilon: linspace(0.001, 1, 10)
+            # epsilon: [0.4,0.9, 0.15, 0.75]
+        value_function:
+          EGreedy: {}
+
+  - UCB:
+      SimpleAgent:
+        action_selection_policy:
+          ASPGreedy: {}
+        value_function:
+          UCB:
+            c: linspace(0.001, 1, 10)
+
+  - LinearUCB:
+      SimpleAgent:
+        action_selection_policy:
+          ASPGreedy: {}
+        value_function:
+          LinearUCB:
+            alpha: linspace(0.1, 1, 5)
+            item_var: 0.01
+            iterations: 20
+            num_lat: [10, 15, 20]
+            stop_criteria: 0.0009
+            user_var: 0.01
+            var: 0.05
+
+  - LinearEGreedy:
       SimpleAgent:
         action_selection_policy:
           ASPEGreedy:
             epsilon: linspace(0.1, 1, 5)
         value_function:
-          EGreedy: {}
+          LinearEGreedy:
+            item_var: 0.01
+            iterations: 20
+            num_lat: [10, 15, 20]
+            stop_criteria: 0.0009
+            user_var: 0.01
+            var: 0.05
+    
+  - ThompsonSampling:
+      SimpleAgent:
+        action_selection_policy:
+          ASPGreedy: {}
+        value_function:
+          ThompsonSampling:
+            alpha_0: linspace(0.1, 1, 5)
+            beta_0: linspace(0.1, 1, 5)
 
-  - LinearUCB:
-    SimpleAgent:
-      action_selection_policy:
-        ASPGreedy: {}
-      value_function:
-        LinearUCB:
-          alpha: 1.0
-          item_var: 0.01
-          iterations: 20
-          num_lat: [10, 15, 20]
-          stop_criteria: 0.0009
-          user_var: 0.01
-          var: 0.05
+  - PTS:
+      SimpleAgent:
+        action_selection_policy:
+          ASPGreedy: {}
+        value_function:
+          PTS:
+            num_lat: [5, 10, 20]
+            num_particles: [5, 10, 20]
+            var: 0.01
+            var_u: 0.173
+            var_v: 2.65
 
+  - GLM_UCB:
+      SimpleAgent:
+        action_selection_policy:
+          ASPGreedy: {}
+        value_function:
+          GLM_UCB:
+            c: [0.1, 0.5, 1, 2, 4, 8]
+            item_var: 0.01
+            iterations: 20
+            num_lat: [5, 10, 20]
+            stop_criteria: 0.0009
+            user_var: 0.01
+            var: 0.05
 # EGreedy:
   # epsilon: linspace(0.1, 1, 5)

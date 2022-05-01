@@ -16,7 +16,7 @@ import yaml
 import irec.evaluation_policies
 import irec.agents.value_functions.matrix_factorization
 import irec.agents.value_functions
-from app import constants
+from app.scripts.others import constants
 from irec.environment.dataset import Dataset
 import argparse
 import pickle

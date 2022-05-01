@@ -1,7 +1,8 @@
-#!/usr/bin/python3
-from os.path import dirname, realpath
-import argparse
+from os.path import dirname, realpath, sep, pardir
+import os
 import yaml
+os.chdir(dirname(realpath(__file__)) + sep + pardir + sep + pardir + sep)
+import argparse
 from irec.connector import utils
 
 settings = utils.load_settings(dirname(realpath(__file__)))

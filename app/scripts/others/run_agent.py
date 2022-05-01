@@ -8,7 +8,7 @@ from mlflow.tracking.client import MlflowClient
 from traitlets.traitlets import default
 
 import mlflow
-from app import constants
+from app.scripts.others import constants
 import mlflow.tracking
 import yaml
 from concurrent.futures import ProcessPoolExecutor, wait, FIRST_COMPLETED

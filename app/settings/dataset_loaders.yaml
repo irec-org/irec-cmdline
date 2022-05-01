@@ -58,6 +58,24 @@
 
 #Default Loaders
 
+'Netflix 10k':
+  FullData:
+
+    dataset:
+      path: ./data/datasets/MovieLens 100k/ratings.csv
+      random_seed: 0
+      file_delimiter: ","
+      skip_head: true
+
+    splitting:
+      strategy: global
+      train_size: 0.8
+      test_consumes: 5
+
+    validation:
+      validation_size: 0.2
+
+
 'MovieLens 100k':
   FullData:
 
@@ -67,21 +85,21 @@
       file_delimiter: ","
       skip_head: true
 
-    prefiltering:
-      filter_users:
-        min_consumption: 50
-        num_users: 100
-      filter_items: 
-        min_ratings: 1
-        num_items: 100
+    # prefiltering:
+    #   filter_users:
+    #     min_consumption: 50
+    #     num_users: 100
+    #   filter_items: 
+    #     min_ratings: 1
+    #     num_items: 100
 
     splitting:
       strategy: global
       train_size: 0.8
       test_consumes: 5
 
-    # validation:
-    #   validation_size: 0.2
+    validation:
+      validation_size: 0.2
 
 
 'MovieLens 100k TrainTest':
@@ -275,15 +293,15 @@
       strategy: temporal
       train_size: 0.8
 
-"Netflix 10k":
-  DefaultDatasetLoader:
-    dataset_path: ./data/datasets/Netflix 10k/
-    random_seed: 0
-    prefiltering:
-      test_consumes: 5  
-    splitting:
-      strategy: temporal
-      train_size: 0.8
+# "Netflix 10k":
+#   DefaultDatasetLoader:
+#     dataset_path: ./data/datasets/Netflix 10k/
+#     random_seed: 0
+#     prefiltering:
+#       test_consumes: 5  
+#     splitting:
+#       strategy: temporal
+#       train_size: 0.8
 "Netflix 10k Validation":
   DefaultValidationDatasetLoader:
     dataset_path: ./data/datasets/Netflix 10k/

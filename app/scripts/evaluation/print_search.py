@@ -1,11 +1,13 @@
-#!/usr/bin/python3
-
-from os.path import dirname, realpath
+from os.path import dirname, realpath, sep, pardir
+import os
 import yaml
+os.chdir(dirname(realpath(__file__)) + sep + pardir + sep + pardir + sep)
 import argparse
 
 from irec.connector import utils
 import argparse
+
+from irec.recommendation.hyperoptimization.grid_search import GridSearch
 
 settings = utils.load_settings(dirname(realpath(__file__)))
 parser = argparse.ArgumentParser()
@@ -18,6 +20,8 @@ parser.add_argument(
 parser.add_argument(
     "--metric_evaluator", default="CumulativeInteractionMetricEvaluator"
 )
+parser.add_argument("--tunning", default="GridSearch")
+
 parser.add_argument("--metrics", nargs="*", default=[settings["defaults"]["metric"]])
 utils.load_settings_to_parser(settings, parser)
 args = parser.parse_args()
@@ -30,5 +34,10 @@ dataset_agents_parameters = yaml.load(
 settings["defaults"]["metric_evaluator"] = args.metric_evaluator
 
 agents_search_parameters = yaml.load(open("./settings/agents_search.yaml"), Loader=yaml.SafeLoader)
+g = GridSearch()
+agents_variables = yaml.load(open("./settings/agents_variables.yaml"), Loader=yaml.SafeLoader)
+agents_variables = [template for agent_name in args.agents for template in agents_variables[args.tunning] if agent_name in template]
 
-utils.print_agent_search(args.agents,args.dataset_loaders, settings,dataset_agents_parameters, agents_search_parameters, args.metrics, args.d,args.t)
+agents_search = g.generate_settings(agents_variables)
+
+utils.print_agent_search(args.agents,args.dataset_loaders, settings,dataset_agents_parameters, agents_search, args.metrics, args.d,args.t)

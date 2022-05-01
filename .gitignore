@@ -9,6 +9,7 @@ __pycache__/
 # Distribution / packaging
 
 
+app/integration/
 app/data/
 app/mlruns/
 app/__pycache__/
