@@ -1,7 +1,8 @@
-#!/usr/bin/python3
-from os.path import dirname, realpath
-import argparse
+from os.path import dirname, realpath, sep, pardir
+import os
 import yaml
+os.chdir(dirname(realpath(__file__)) + sep + pardir + sep + pardir + sep)
+import argparse
 from irec.connector import utils
 
 settings = utils.load_settings(dirname(realpath(__file__)))
@@ -10,7 +11,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument(
     "--evaluation_policy", default=settings["defaults"]["evaluation_policy"]
 )
-parser.add_argument("--dataset_loader")
+parser.add_argument("--dataset_loaders", nargs="*")
 parser.add_argument("--agents", nargs="*")
 parser.add_argument("--metrics", nargs="*")
 parser.add_argument(
@@ -30,9 +31,9 @@ dataset_agents_parameters = yaml.load(
 settings["defaults"]["metric_evaluator"] = args.metric_evaluator
 settings["defaults"]["evaluation_policy"] = args.evaluation_policy
 
-utils.print_results_latex_horizontal_table(
+utils.print_results_latex_table(
     args.agents,
-    args.dataset_loader,
+    args.dataset_loaders,
     settings,
     dataset_agents_parameters,
     args.metrics,

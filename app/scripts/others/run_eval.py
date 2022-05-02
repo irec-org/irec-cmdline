@@ -7,17 +7,17 @@ sys.path.append(dirname(realpath(__file__)) + sep + pardir)
 
 from concurrent.futures import FIRST_COMPLETED, ProcessPoolExecutor, wait
 from app import utils
-import irec.metrics
+import irec.offline_experiments.metrics
 
 # from irec.utils.InteractorCache import InteractorCache
 import numpy as np
 import yaml
 
 import irec.evaluation_policies
-import irec.mf
-import irec.value_functions
-from app import constants
-from irec.utils.dataset import Dataset
+import irec.agents.value_functions.matrix_factorization
+import irec.agents.value_functions
+from app.scripts.others import constants
+from irec.environment.dataset import Dataset
 import argparse
 import pickle
 

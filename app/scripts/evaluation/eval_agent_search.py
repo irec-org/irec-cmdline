@@ -1,12 +1,13 @@
-#!/usr/bin/python3
-
-from os.path import dirname, realpath
-import yaml
+from os.path import dirname, realpath, sep, pardir
 import os
+import yaml
+os.chdir(dirname(realpath(__file__)) + sep + pardir + sep + pardir + sep)
 import argparse
 
 from irec.connector import utils
 import argparse
+
+from irec.recommendation.hyperoptimization.grid_search import GridSearch
 
 settings = utils.load_settings(dirname(realpath(__file__)))
 parser = argparse.ArgumentParser()
@@ -23,11 +24,19 @@ parser.add_argument("--metrics", nargs="*", default=[settings["defaults"]["metri
 parser.add_argument(
     "--metric_evaluator", default="CumulativeInteractionMetricEvaluator"
 )
+parser.add_argument("--tunning", default="GridSearch")
+
 utils.load_settings_to_parser(settings, parser)
 args = parser.parse_args()
 settings = utils.sync_settings_from_args(settings, args)
 
-agents_search = yaml.load(open("./settings/agents_search.yaml"), Loader=yaml.SafeLoader)
+# agents_search = yaml.load(open("./settings/agents_search.yaml"), Loader=yaml.SafeLoader)
+agents_variables = yaml.load(open("./settings/agents_variables.yaml"), Loader=yaml.SafeLoader)
+agents_variables = [template for agent_name in args.agents for template in agents_variables[args.tunning] if agent_name in template]
+
+g = GridSearch()
+agents_search = g.generate_settings(agents_variables)
+
 
 settings["defaults"]["evaluation_policy"] = args.evaluation_policy
 settings["defaults"]["metric_evaluator"] = args.metric_evaluator

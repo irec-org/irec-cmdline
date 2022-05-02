@@ -29,7 +29,7 @@ import utils
 import pandas as pd
 
 sys.path.append(dirname(realpath(__file__)) + sep + pardir + sep + "irec")
-from app import constants
+from app.scripts.others import constants
 
 from app import utils
 import scipy
@@ -44,8 +44,8 @@ from irec.metric_evaluators import (
     CumulativeInteractionMetricEvaluator,
     UserCumulativeInteractionMetricEvaluator,
 )
-from irec.utils.dataset import Dataset
-import metrics
+from irec.environment.dataset import Dataset
+from irec.offline_experiments import metrics
 import matplotlib.pyplot as plt
 from cycler import cycler
 from collections import defaultdict

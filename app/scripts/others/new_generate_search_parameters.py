@@ -50,6 +50,7 @@ for agent_name in args.agents:
 
 	new_parameters = generate_grid_parameters(template)
 	agents_search[agent_name] = new_parameters
+	print(template)
 	print(f"({len(new_parameters)}) New parameters added in {agent_name}!")
 
 yaml.dump(agents_search, open("./settings/agents_search.yaml", "w"))

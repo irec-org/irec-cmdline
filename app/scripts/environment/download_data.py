@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 from os.path import dirname, realpath, sep, pardir
 import os
-import sys
-
-sys.path.append(dirname(dirname(realpath(__file__))))
+os.chdir(dirname(realpath(__file__)) + sep + pardir + sep + pardir + sep)
 import argparse
 from irec.connector.utils import download_data
 

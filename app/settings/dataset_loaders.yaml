@@ -58,64 +58,117 @@
 
 #Default Loaders
 
-# 'MovieLens 100k':
-#   DefaultLoader:
-#     dataset_path: ./data/datasets/MovieLens 100k/
-#     random_seed: 0
-#     prefiltering:
-#       filter_users:
-#         min_consumption: 50
-#         num_users: 100
-#       filter_items: 
-#         min_ratings: 1
-#         num_items: 100
-#       test_consumes: 5
-#     splitting:
-#       strategy: temporal
-#       train_size: 0.8
+'Netflix 10k':
+  FullData:
 
-
-'MovieLens 100k':
-  DefaultLoader:
     dataset:
       path: ./data/datasets/MovieLens 100k/ratings.csv
       random_seed: 0
       file_delimiter: ","
       skip_head: true
-    prefiltering: #optional filters
-      filter_users:
-        min_consumption: 50
-        num_users: 100
-      filter_items: 
-        min_ratings: 1
-        num_items: 100
+
     splitting:
-      strategy: random
+      strategy: global
       train_size: 0.8
       test_consumes: 5
 
+    validation:
+      validation_size: 0.2
+
+
+'MovieLens 100k':
+  FullData:
+
+    dataset:
+      path: ./data/datasets/MovieLens 100k/ratings.csv
+      random_seed: 0
+      file_delimiter: ","
+      skip_head: true
+
+    # prefiltering:
+    #   filter_users:
+    #     min_consumption: 50
+    #     num_users: 100
+    #   filter_items: 
+    #     min_ratings: 1
+    #     num_items: 100
+
+    splitting:
+      strategy: global
+      train_size: 0.8
+      test_consumes: 5
+
+    validation:
+      validation_size: 0.2
+
 
 'MovieLens 100k TrainTest':
-  TrainTestLoader:
+  SplitData:
+
     dataset:
       train:
-        path: ./data/datasets/MovieLens 100k TrainTest/train.csv
+        path: ./data/datasets/MovieLens 100k TrainTest/train.data
         file_delimiter: "::"
         skip_head: false
       test:
-        path: ./data/datasets/MovieLens 100k TrainTest/test.csv
+        path: ./data/datasets/MovieLens 100k TrainTest/test.data
         file_delimiter: "::"
         skip_head: false
 
-"MovieLens 1M":
-  DefaultDatasetLoader:  
-    dataset_path: ./data/datasets/MovieLens 1M/
-    random_seed: 0
-    prefiltering:
-      test_consumes: 5    
+    # validation:
+    #   x_validation: 
+    #     path: ./data/datasets/MovieLens 100k TrainTest/x_validation.csv
+    #     file_delimiter: "::"
+    #     skip_head: false
+    #   y_validation: 
+    #     path: ./data/datasets/MovieLens 100k TrainTest/y_validation.csv
+    #     file_delimiter: "::"
+    #     skip_head: false
+
+
+'Nano Dataset':
+  FullData:
+    
+    dataset:
+      path: ./data/datasets/Nano Dataset/ratings.csv
+      random_seed: 0
+      file_delimiter: ","
+      skip_head: true
+    
     splitting:
       strategy: temporal
       train_size: 0.8
+      test_consumes: 1
+
+
+
+
+"MovieLens 1M":
+  FullData:
+
+    dataset:
+      path: ./data/datasets/MovieLens 1M/ratings.csv
+      random_seed: 0
+      file_delimiter: ","
+      skip_head: true
+
+    # prefiltering:
+    #   filter_users:
+    #     min_consumption: 50
+    #     num_users: 100
+    #   filter_items: 
+    #     min_ratings: 1
+    #     num_items: 100
+
+    splitting:
+      strategy: global
+      train_size: 0.8
+      test_consumes: 5
+
+    # validation:
+    #   validation_size: 0.2
+
+
 "MovieLens 1M Validation":
   DefaultValidationDatasetLoader:  
     dataset_path: ./data/datasets/MovieLens 1M/
@@ -240,15 +293,15 @@
       strategy: temporal
       train_size: 0.8
 
-"Netflix 10k":
-  DefaultDatasetLoader:
-    dataset_path: ./data/datasets/Netflix 10k/
-    random_seed: 0
-    prefiltering:
-      test_consumes: 5  
-    splitting:
-      strategy: temporal
-      train_size: 0.8
+# "Netflix 10k":
+#   DefaultDatasetLoader:
+#     dataset_path: ./data/datasets/Netflix 10k/
+#     random_seed: 0
+#     prefiltering:
+#       test_consumes: 5  
+#     splitting:
+#       strategy: temporal
+#       train_size: 0.8
 "Netflix 10k Validation":
   DefaultValidationDatasetLoader:
     dataset_path: ./data/datasets/Netflix 10k/
@@ -353,25 +406,6 @@
       test_consumes: 5  
     splitting:
       strategy: temporal
-      train_size: 0.8
-
-'Nano Dataset':
-  DefaultDatasetLoader:
-    dataset_path: ./data/datasets/Nano Dataset/
-    random_seed: 0
-    prefiltering:
-      test_consumes: 1
-    splitting:
-      strategy: random
-      train_size: 0.8
-'Nano Dataset Validation':
-  DefaultValidationDatasetLoader:
-    dataset_path: ./data/datasets/Nano Dataset/
-    random_seed: 0
-    prefiltering:
-      test_consumes: 1
-    splitting:
-      strategy: random
       train_size: 0.8
     
 'MovieLens 25M':

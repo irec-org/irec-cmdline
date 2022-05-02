@@ -1,3 +1,298 @@
+MovieLens 100k TrainTest:
+  ALEntropy:
+    SimpleAgent:
+      action_selection_policy:
+        ASPGreedy: {}
+      value_function:
+        ALEntropy: {}
+  ALMostPopular:
+    SimpleAgent:
+      action_selection_policy:
+        ASPGreedy: {}
+      value_function:
+        ALMostPopular: {}
+  ClusterBandit:
+    SimpleAgent:
+      action_selection_policy:
+        ASPGreedy: {}
+      value_function:
+        ClusterBandit:
+          B: 5
+          C: 0.5
+          D: 3
+          num_clusters: 4
+          num_lat: 10
+  COFIBA:
+    SimpleAgent:
+      action_selection_policy:
+        ASPGreedy: {}
+      value_function:
+        COFIBA:
+          alpha: 1
+          alpha_2: 1
+          num_lat: 10
+  DistinctPopular:
+    SimpleAgent:
+      action_selection_policy:
+        ASPGreedy: {}
+      value_function:
+        DistinctPopular: {}
+  EGreedy:
+    SimpleAgent:
+      action_selection_policy:
+        ASPEGreedy:
+          epsilon: 0.1
+      value_function:
+        EGreedy: {}
+  EMostPopular:
+    SimpleAgent:
+      action_selection_policy:
+        ASPGreedy: {}
+      value_function:
+        EMostPopular: {}
+  Entropy:
+    SimpleAgent:
+      action_selection_policy:
+        ASPGreedy: {}
+      value_function:
+        Entropy: {}
+  Entropy0:
+    SimpleAgent:
+      action_selection_policy:
+        ASPGreedy: {}
+      value_function:
+        Entropy0: {}
+  GLM_UCB:
+    SimpleAgent:
+      action_selection_policy:
+        ASPGreedy: {}
+      value_function:
+        GLM_UCB:
+          c: 1.0
+          num_lat: 10
+  HELF:
+    SimpleAgent:
+      action_selection_policy:
+        ASPGreedy: {}
+      value_function:
+        HELF: {}
+  ICTRTS:
+    SimpleAgent:
+      action_selection_policy:
+        ASPGreedy: {}
+      value_function:
+        ICTRTS:
+          num_lat: 5
+          num_particles: 10
+  LinEGreedy:
+    SimpleAgent:
+      action_selection_policy:
+        ASPEGreedy:
+          epsilon: 0.1
+      value_function:
+        LinEGreedy:
+          num_lat: 10
+  LinUCB:
+    SimpleAgent:
+      action_selection_policy:
+        ASPGreedy: {}
+      value_function:
+        LinUCB:
+          alpha: 1.0
+          num_lat: 10
+  LinearEGreedy:
+    SimpleAgent:
+      action_selection_policy:
+        ASPEGreedy:
+          epsilon: 0.1
+      value_function:
+        LinearEGreedy:
+          item_var: 0.01
+          iterations: 20
+          num_lat: 10
+          stop_criteria: 0.0009
+          user_var: 0.01
+          var: 0.05
+  LinearThompsonSampling:
+    SimpleAgent:
+      action_selection_policy:
+        ASPGreedy: {}
+      value_function:
+        LinearThompsonSampling:
+          item_var: 0.01
+          iterations: 20
+          num_lat: 10
+          stop_criteria: 0.0009
+          user_var: 0.01
+          var: 0.05
+  LinearUCB:
+    SimpleAgent:
+      action_selection_policy:
+        ASPGreedy: {}
+      value_function:
+        LinearUCB:
+          alpha: 1.0
+          item_var: 0.01
+          iterations: 20
+          num_lat: 10
+          stop_criteria: 0.0009
+          user_var: 0.01
+          var: 0.05
+  LogPopEnt:
+    SimpleAgent:
+      action_selection_policy:
+        ASPGreedy: {}
+      value_function:
+        LogPopEnt: {}
+  MostPopular:
+    SimpleAgent:
+      action_selection_policy:
+        ASPGreedy: {}
+      value_function:
+        MostPopular: {}
+  MostRepresentative:
+    SimpleAgent:
+      action_selection_policy:
+        ASPGreedy: {}
+      value_function:
+        MostRepresentative: {}
+  NICF:
+    SimpleAgent:
+      action_selection_policy:
+        ASPGreedy: {}
+      value_function:
+        NICF:
+          batch: 128
+          clip_param: 0.2
+          dropout_rate: 0.1
+          gamma: 0.0
+          inner_epoch: 50
+          latent_factor: 50
+          learning_rate: 0.001
+          num_blocks: 2
+          num_heads: 1
+          restore_model: false
+          rnn_layer: 2
+          time_step: 100
+          training_epoch: 4000
+  NaiveEnsemble:
+    SimpleEnsembleAgent:
+      action_selection_policy:
+        ASPGenericGreedy: {}
+      agents:
+      - LinUCB:
+          SimpleAgent:
+            action_selection_policy:
+              ASPGreedy: {}
+            value_function:
+              LinUCB:
+                alpha: 1.0
+                num_lat: 10
+      - MostPopular:
+          SimpleAgent:
+            action_selection_policy:
+              ASPGreedy: {}
+            value_function:
+              MostPopular: {}
+      value_function:
+        GenericThompsonSampling:
+          alpha_0: 1
+          beta_0: 1
+  OurMethod3:
+    SimpleAgent:
+      action_selection_policy:
+        ASPGreedy: {}
+      value_function:
+        OurMethod3:
+          alpha: 0.5
+          num_lat: 20
+  OurMethodEntropy:
+    SimpleAgent:
+      action_selection_policy:
+        ASPGreedy: {}
+      value_function:
+        OurMethodEntropy:
+          alpha: 0.5
+          num_lat: 20
+  PPELPE:
+    SimpleAgent:
+      action_selection_policy:
+        ASPGreedy: {}
+      value_function:
+        PPELPE: {}
+  PTS:
+    SimpleAgent:
+      action_selection_policy:
+        ASPGreedy: {}
+      value_function:
+        PTS:
+          num_lat: 2
+          num_particles: 2
+          var: 0.5
+          var_u: 1.0
+          var_v: 1.0
+  PopPlusEnt:
+    SimpleAgent:
+      action_selection_policy:
+        ASPGreedy: {}
+      value_function:
+        PopPlusEnt: {}
+  Random:
+    SimpleAgent:
+      action_selection_policy:
+        ASPGreedy: {}
+      value_function:
+        Random: {}
+  ThompsonSampling:
+    SimpleAgent:
+      action_selection_policy:
+        ASPGreedy: {}
+      value_function:
+        ThompsonSampling:
+          alpha_0: 1
+          beta_0: 1
+  TinUCB:
+    SimpleAgent:
+      action_selection_policy:
+        ASPGreedy: {}
+      value_function:
+        TinUCB:
+          alpha: 0.2
+  UCB:
+    SimpleAgent:
+      action_selection_policy:
+        ASPGreedy: {}
+      value_function:
+        UCB:
+          c: 0.01
+  UCBLearner:
+    SimpleAgent:
+      action_selection_policy:
+        ASPGreedy: {}
+      value_function:
+        UCBLearner:
+          num_lat: 10
+          stop: 14
+  WSPB:
+    SimpleAgent:
+      action_selection_policy:
+        ASPGreedy: {}
+      value_function:
+        WSPB:
+          alpha: 0.5
+          num_lat: 20
+  kNNBandit:
+    SimpleAgent:
+      action_selection_policy:
+        ASPGreedy: {}
+      value_function:
+        kNNBandit:
+          alpha_0: 1
+          beta_0: 100
+          k: 1
+
+
+
 Good Books:
   ALEntropy:
     SimpleAgent:
@@ -11,12 +306,12 @@ Good Books:
         ASPGreedy: {}
       value_function:
         ALMostPopular: {}
-  CB:
+  ClusterBandit:
     SimpleAgent:
       action_selection_policy:
         ASPGreedy: {}
       value_function:
-        CB:
+        ClusterBandit:
           B: 5
           C: 0.5
           D: 3
@@ -2018,12 +2313,12 @@ Good Books TRTE:
         ASPGreedy: {}
       value_function:
         ALMostPopular: {}
-  CB:
+  ClusterBandit:
     SimpleAgent:
       action_selection_policy:
         ASPGreedy: {}
       value_function:
-        CB:
+        ClusterBandit:
           B: 5
           C: 0.5
           D: 3
@@ -2760,12 +3055,12 @@ Good Books TRTE:
       value_function:
         kNNBandit: {}
 Good Books Validation:
-  CB:
+  ClusterBandit:
     SimpleAgent:
       action_selection_policy:
         ASPGreedy: {}
       value_function:
-        CB:
+        ClusterBandit:
           B: 5
           C: 0.5
           D: 3
@@ -3105,12 +3400,12 @@ Good Books Validation:
       value_function:
         kNNBandit: {}
 Kindle 4k:
-  CB:
+  ClusterBandit:
     SimpleAgent:
       action_selection_policy:
         ASPGreedy: {}
       value_function:
-        CB:
+        ClusterBandit:
           B: 5
           C: 0.5
           D: 3
@@ -3244,24 +3539,24 @@ Kindle 4k:
           alpha: 0.25
           num_lat: 20
 Kindle 4k TRTE:
-  CB:
+  ClusterBandit:
     SimpleAgent:
       action_selection_policy:
         ASPGreedy: {}
       value_function:
-        CB:
+        ClusterBandit:
           B: 5
           C: 0.5
           D: 3
           num_clusters: 4
           num_lat: 10
 Kindle 4k TRTE Validation:
-  CB:
+  ClusterBandit:
     SimpleAgent:
       action_selection_policy:
         ASPGreedy: {}
       value_function:
-        CB:
+        ClusterBandit:
           B: 5
           C: 0.5
           D: 3
@@ -3438,12 +3733,12 @@ LastFM 5K Validation:
           alpha: 0.5
           num_lat: 20
 LastFM 5k:
-  CB:
+  ClusterBandit:
     SimpleAgent:
       action_selection_policy:
         ASPGreedy: {}
       value_function:
-        CB:
+        ClusterBandit:
           B: 5
           C: 0.5
           D: 3
@@ -3569,12 +3864,12 @@ LastFM 5k:
           alpha: 0.25
           num_lat: 20
 LastFM 5k TRTE:
-  CB:
+  ClusterBandit:
     SimpleAgent:
       action_selection_policy:
         ASPGreedy: {}
       value_function:
-        CB:
+        ClusterBandit:
           B: 5
           C: 0.5
           D: 3
@@ -3677,12 +3972,12 @@ LastFM 5k TRTE:
           lambda_u: 0.1
           num_lat: 20
 LastFM 5k TRTE Validation:
-  CB:
+  ClusterBandit:
     SimpleAgent:
       action_selection_policy:
         ASPGreedy: {}
       value_function:
-        CB:
+        ClusterBandit:
           B: 5
           C: 0.5
           D: 3
@@ -3746,6 +4041,37 @@ LastFM 5k TRTE Validation:
           lambda_u: 0.1
           num_lat: 20
 MovieLens 100k:
+# Nano Dataset:
+  LinearUCB1:
+    SimpleAgent:
+      action_selection_policy:
+        ASPGreedy: {}
+      value_function:
+        LinearUCB1:
+          alpha: 1.0
+          item_var: 0.01
+          iterations: 20
+          num_lat: 20
+          stop_criteria: 0.0009
+          user_var: 0.01
+          var: 0.05
+  BestRated:
+    SimpleAgent:
+      action_selection_policy:
+        ASPGreedy: {}
+      value_function:
+        BestRated: {}
+  ClusterBandit:
+    SimpleAgent:
+      action_selection_policy:
+        ASPGreedy: {}
+      value_function:
+        ClusterBandit:
+          B: 5
+          C: 0.5
+          D: 3
+          num_clusters: 4
+          num_lat: 10
   ALEntropy:
     SimpleAgent:
       action_selection_policy:
@@ -3758,12 +4084,12 @@ MovieLens 100k:
         ASPGreedy: {}
       value_function:
         ALMostPopular: {}
-  CB:
+  ClusterBandit:
     SimpleAgent:
       action_selection_policy:
         ASPGreedy: {}
       value_function:
-        CB:
+        ClusterBandit:
           B: 5
           C: 0.5
           D: 3
@@ -3815,8 +4141,13 @@ MovieLens 100k:
         ASPGreedy: {}
       value_function:
         GLM_UCB:
-          c: 1.0
+          c: 4
+          item_var: 0.01
+          iterations: 20
           num_lat: 10
+          stop_criteria: 0.0009
+          user_var: 0.01
+          var: 0.05
   HELF:
     SimpleAgent:
       action_selection_policy:
@@ -4037,302 +4368,6 @@ MovieLens 100k:
           alpha_0: 1
           beta_0: 100
           k: 1
-
-
-MovieLens 100k TrainTest:
-  ALEntropy:
-    SimpleAgent:
-      action_selection_policy:
-        ASPGreedy: {}
-      value_function:
-        ALEntropy: {}
-  ALMostPopular:
-    SimpleAgent:
-      action_selection_policy:
-        ASPGreedy: {}
-      value_function:
-        ALMostPopular: {}
-  CB:
-    SimpleAgent:
-      action_selection_policy:
-        ASPGreedy: {}
-      value_function:
-        CB:
-          B: 5
-          C: 0.5
-          D: 3
-          num_clusters: 4
-          num_lat: 10
-  COFIBA:
-    SimpleAgent:
-      action_selection_policy:
-        ASPGreedy: {}
-      value_function:
-        COFIBA:
-          alpha: 1
-          alpha_2: 1
-          num_lat: 10
-  DistinctPopular:
-    SimpleAgent:
-      action_selection_policy:
-        ASPGreedy: {}
-      value_function:
-        DistinctPopular: {}
-  EGreedy:
-    SimpleAgent:
-      action_selection_policy:
-        ASPEGreedy:
-          epsilon: 0.1
-      value_function:
-        EGreedy: {}
-  EMostPopular:
-    SimpleAgent:
-      action_selection_policy:
-        ASPGreedy: {}
-      value_function:
-        EMostPopular: {}
-  Entropy:
-    SimpleAgent:
-      action_selection_policy:
-        ASPGreedy: {}
-      value_function:
-        Entropy: {}
-  Entropy0:
-    SimpleAgent:
-      action_selection_policy:
-        ASPGreedy: {}
-      value_function:
-        Entropy0: {}
-  GLM_UCB:
-    SimpleAgent:
-      action_selection_policy:
-        ASPGreedy: {}
-      value_function:
-        GLM_UCB:
-          c: 1.0
-          num_lat: 10
-  HELF:
-    SimpleAgent:
-      action_selection_policy:
-        ASPGreedy: {}
-      value_function:
-        HELF: {}
-  ICTRTS:
-    SimpleAgent:
-      action_selection_policy:
-        ASPGreedy: {}
-      value_function:
-        ICTRTS:
-          num_lat: 5
-          num_particles: 10
-  LinEGreedy:
-    SimpleAgent:
-      action_selection_policy:
-        ASPEGreedy:
-          epsilon: 0.1
-      value_function:
-        LinEGreedy:
-          num_lat: 10
-  LinUCB:
-    SimpleAgent:
-      action_selection_policy:
-        ASPGreedy: {}
-      value_function:
-        LinUCB:
-          alpha: 1.0
-          num_lat: 10
-  LinearEGreedy:
-    SimpleAgent:
-      action_selection_policy:
-        ASPEGreedy:
-          epsilon: 0.1
-      value_function:
-        LinearEGreedy:
-          item_var: 0.01
-          iterations: 20
-          num_lat: 10
-          stop_criteria: 0.0009
-          user_var: 0.01
-          var: 0.05
-  LinearThompsonSampling:
-    SimpleAgent:
-      action_selection_policy:
-        ASPGreedy: {}
-      value_function:
-        LinearThompsonSampling:
-          item_var: 0.01
-          iterations: 20
-          num_lat: 10
-          stop_criteria: 0.0009
-          user_var: 0.01
-          var: 0.05
-  LinearUCB:
-    SimpleAgent:
-      action_selection_policy:
-        ASPGreedy: {}
-      value_function:
-        LinearUCB:
-          alpha: 1.0
-          item_var: 0.01
-          iterations: 20
-          num_lat: 10
-          stop_criteria: 0.0009
-          user_var: 0.01
-          var: 0.05
-  LogPopEnt:
-    SimpleAgent:
-      action_selection_policy:
-        ASPGreedy: {}
-      value_function:
-        LogPopEnt: {}
-  MostPopular:
-    SimpleAgent:
-      action_selection_policy:
-        ASPGreedy: {}
-      value_function:
-        MostPopular: {}
-  MostRepresentative:
-    SimpleAgent:
-      action_selection_policy:
-        ASPGreedy: {}
-      value_function:
-        MostRepresentative: {}
-  NICF:
-    SimpleAgent:
-      action_selection_policy:
-        ASPGreedy: {}
-      value_function:
-        NICF:
-          batch: 128
-          clip_param: 0.2
-          dropout_rate: 0.1
-          gamma: 0.0
-          inner_epoch: 50
-          latent_factor: 50
-          learning_rate: 0.001
-          num_blocks: 2
-          num_heads: 1
-          restore_model: false
-          rnn_layer: 2
-          time_step: 100
-          training_epoch: 4000
-  NaiveEnsemble:
-    SimpleEnsembleAgent:
-      action_selection_policy:
-        ASPGenericGreedy: {}
-      agents:
-      - LinUCB:
-          SimpleAgent:
-            action_selection_policy:
-              ASPGreedy: {}
-            value_function:
-              LinUCB:
-                alpha: 1.0
-                num_lat: 10
-      - MostPopular:
-          SimpleAgent:
-            action_selection_policy:
-              ASPGreedy: {}
-            value_function:
-              MostPopular: {}
-      value_function:
-        GenericThompsonSampling:
-          alpha_0: 1
-          beta_0: 1
-  OurMethod3:
-    SimpleAgent:
-      action_selection_policy:
-        ASPGreedy: {}
-      value_function:
-        OurMethod3:
-          alpha: 0.5
-          num_lat: 20
-  OurMethodEntropy:
-    SimpleAgent:
-      action_selection_policy:
-        ASPGreedy: {}
-      value_function:
-        OurMethodEntropy:
-          alpha: 0.5
-          num_lat: 20
-  PPELPE:
-    SimpleAgent:
-      action_selection_policy:
-        ASPGreedy: {}
-      value_function:
-        PPELPE: {}
-  PTS:
-    SimpleAgent:
-      action_selection_policy:
-        ASPGreedy: {}
-      value_function:
-        PTS:
-          num_lat: 2
-          num_particles: 2
-          var: 0.5
-          var_u: 1.0
-          var_v: 1.0
-  PopPlusEnt:
-    SimpleAgent:
-      action_selection_policy:
-        ASPGreedy: {}
-      value_function:
-        PopPlusEnt: {}
-  Random:
-    SimpleAgent:
-      action_selection_policy:
-        ASPGreedy: {}
-      value_function:
-        Random: {}
-  ThompsonSampling:
-    SimpleAgent:
-      action_selection_policy:
-        ASPGreedy: {}
-      value_function:
-        ThompsonSampling:
-          alpha_0: 1
-          beta_0: 1
-  TinUCB:
-    SimpleAgent:
-      action_selection_policy:
-        ASPGreedy: {}
-      value_function:
-        TinUCB:
-          alpha: 0.2
-  UCB:
-    SimpleAgent:
-      action_selection_policy:
-        ASPGreedy: {}
-      value_function:
-        UCB:
-          c: 0.01
-  UCBLearner:
-    SimpleAgent:
-      action_selection_policy:
-        ASPGreedy: {}
-      value_function:
-        UCBLearner:
-          num_lat: 10
-          stop: 14
-  WSPB:
-    SimpleAgent:
-      action_selection_policy:
-        ASPGreedy: {}
-      value_function:
-        WSPB:
-          alpha: 0.5
-          num_lat: 20
-  kNNBandit:
-    SimpleAgent:
-      action_selection_policy:
-        ASPGreedy: {}
-      value_function:
-        kNNBandit:
-          alpha_0: 1
-          beta_0: 100
-          k: 1
-
-
 MovieLens 10M:
   ALEntropy:
     SimpleAgent:
@@ -4346,12 +4381,12 @@ MovieLens 10M:
         ASPGreedy: {}
       value_function:
         ALMostPopular: {}
-  CB:
+  ClusterBandit:
     SimpleAgent:
       action_selection_policy:
         ASPGreedy: {}
       value_function:
-        CB:
+        ClusterBandit:
           B: 5
           C: 0.5
           D: 3
@@ -6399,12 +6434,12 @@ MovieLens 10M Sampled:
       value_function:
         kNNBandit: {}
 MovieLens 10M Validation:
-  CB:
+  ClusterBandit:
     SimpleAgent:
       action_selection_policy:
         ASPGreedy: {}
       value_function:
-        CB:
+        ClusterBandit:
           B: 5
           C: 0.5
           D: 3
@@ -6757,12 +6792,12 @@ MovieLens 1M:
         ASPGreedy: {}
       value_function:
         ALMostPopular: {}
-  CB:
+  ClusterBandit:
     SimpleAgent:
       action_selection_policy:
         ASPGreedy: {}
       value_function:
-        CB:
+        ClusterBandit:
           B: 5
           C: 0.5
           D: 3
@@ -7334,12 +7369,12 @@ MovieLens 1M (B):
           beta_0: 1
           k: 1
 MovieLens 1M Validation:
-  CB:
+  ClusterBandit:
     SimpleAgent:
       action_selection_policy:
         ASPGreedy: {}
       value_function:
-        CB:
+        ClusterBandit:
           B: 5
           C: 0.5
           D: 3
@@ -7441,13 +7476,13 @@ MovieLens 1M Validation:
         WSPB:
           alpha: 1
           num_lat: 10
-Nano Dataset:
-  CB:
+Nano Dataset2:
+  ClusterBandit:
     SimpleAgent:
       action_selection_policy:
         ASPGreedy: {}
       value_function:
-        CB:
+        ClusterBandit:
           B: 5
           C: 0.5
           D: 3
@@ -7581,12 +7616,12 @@ Nano Dataset:
           alpha: 1
           num_lat: 10
 Netflix 10k:
-  CB:
+  ClusterBandit:
     SimpleAgent:
       action_selection_policy:
         ASPGreedy: {}
       value_function:
-        CB:
+        ClusterBandit:
           B: 5
           C: 0.5
           D: 3
@@ -7720,12 +7755,12 @@ Netflix 10k:
           alpha: 1
           num_lat: 10
 Netflix 10k TRTE:
-  CB:
+  ClusterBandit:
     SimpleAgent:
       action_selection_policy:
         ASPGreedy: {}
       value_function:
-        CB:
+        ClusterBandit:
           B: 5
           C: 0.5
           D: 3
@@ -7859,12 +7894,12 @@ Netflix 10k TRTE:
           alpha: 1
           num_lat: 10
 Netflix 10k TRTE Validation:
-  CB:
+  ClusterBandit:
     SimpleAgent:
       action_selection_policy:
         ASPGreedy: {}
       value_function:
-        CB:
+        ClusterBandit:
           B: 5
           C: 0.5
           D: 3
@@ -8202,12 +8237,12 @@ Yahoo Music:
         ASPGreedy: {}
       value_function:
         ALMostPopular: {}
-  CB:
+  ClusterBandit:
     SimpleAgent:
       action_selection_policy:
         ASPGreedy: {}
       value_function:
-        CB:
+        ClusterBandit:
           B: 5
           C: 0.5
           D: 3
@@ -8944,12 +8979,12 @@ Yahoo Music:
       value_function:
         kNNBandit: {}
 Yahoo Music 10k:
-  CB:
+  ClusterBandit:
     SimpleAgent:
       action_selection_policy:
         ASPGreedy: {}
       value_function:
-        CB:
+        ClusterBandit:
           B: 5
           C: 0.5
           D: 3
@@ -9062,12 +9097,12 @@ Yahoo Music 10k:
           alpha: 0.5
           num_lat: 10
 Yahoo Music 10k Validation:
-  CB:
+  ClusterBandit:
     SimpleAgent:
       action_selection_policy:
         ASPGreedy: {}
       value_function:
-        CB:
+        ClusterBandit:
           B: 5
           C: 0.5
           D: 3
@@ -9149,12 +9184,12 @@ Yahoo Music 10k Validation:
           alpha: 0.5
           num_lat: 10
 Yahoo Music 5k:
-  CB:
+  ClusterBandit:
     SimpleAgent:
       action_selection_policy:
         ASPGreedy: {}
       value_function:
-        CB:
+        ClusterBandit:
           B: 5
           C: 0.5
           D: 3
@@ -9267,12 +9302,12 @@ Yahoo Music 5k:
           alpha: 0.25
           num_lat: 10
 Yahoo Music 5k Validation:
-  CB:
+  ClusterBandit:
     SimpleAgent:
       action_selection_policy:
         ASPGreedy: {}
       value_function:
-        CB:
+        ClusterBandit:
           B: 5
           C: 0.5
           D: 3
@@ -11739,12 +11774,12 @@ Yahoo Music Sampled:
       value_function:
         kNNBandit: {}
 Yahoo Music Validation:
-  CB:
+  ClusterBandit:
     SimpleAgent:
       action_selection_policy:
         ASPGreedy: {}
       value_function:
-        CB:
+        ClusterBandit:
           B: 5
           C: 0.5
           D: 3

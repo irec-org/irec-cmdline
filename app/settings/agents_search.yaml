@@ -1,64 +1,3 @@
-CB:
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      CB:
-        B: 5
-        C: 0.5
-        D: 3
-        num_clusters: 4
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      CB:
-        B: 5
-        C: 0.5
-        D: 3
-        num_clusters: 4
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      CB:
-        B: 5
-        C: 0.5
-        D: 3
-        num_clusters: 4
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      CB:
-        B: 5
-        C: 0.5
-        D: 3
-        num_clusters: 8
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      CB:
-        B: 5
-        C: 0.5
-        D: 3
-        num_clusters: 8
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      CB:
-        B: 5
-        C: 0.5
-        D: 3
-        num_clusters: 8
-        num_lat: 20
 COFIBA:
 - SimpleAgent:
     action_selection_policy:
@@ -68,6 +7,67 @@ COFIBA:
         alpha: 1
         alpha_2: 1
         num_lat: 10
+ClusterBandit:
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      ClusterBandit:
+        B: 5
+        C: 0.5
+        D: 3
+        num_clusters: 4
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      ClusterBandit:
+        B: 5
+        C: 0.5
+        D: 3
+        num_clusters: 4
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      ClusterBandit:
+        B: 5
+        C: 0.5
+        D: 3
+        num_clusters: 4
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      ClusterBandit:
+        B: 5
+        C: 0.5
+        D: 3
+        num_clusters: 8
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      ClusterBandit:
+        B: 5
+        C: 0.5
+        D: 3
+        num_clusters: 8
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      ClusterBandit:
+        B: 5
+        C: 0.5
+        D: 3
+        num_clusters: 8
+        num_lat: 20
 EGreedy:
 - SimpleAgent:
     action_selection_policy:
@@ -78,25 +78,25 @@ EGreedy:
 - SimpleAgent:
     action_selection_policy:
       ASPEGreedy:
-        epsilon: 0.05
+        epsilon: 0.325
     value_function:
       EGreedy: {}
 - SimpleAgent:
     action_selection_policy:
       ASPEGreedy:
-        epsilon: 0.01
+        epsilon: 0.55
     value_function:
       EGreedy: {}
 - SimpleAgent:
     action_selection_policy:
       ASPEGreedy:
-        epsilon: 0.001
+        epsilon: 0.775
     value_function:
       EGreedy: {}
 - SimpleAgent:
     action_selection_policy:
       ASPEGreedy:
-        epsilon: 0.0001
+        epsilon: 1.0
     value_function:
       EGreedy: {}
 EMostPopular:
@@ -4178,1067 +4178,6 @@ NICF:
         rnn_layer: 1
         time_step: 3
         training_epoch: 30000
-UCBLearner:
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      UCBLearner:
-        alpha: 0.25
-        num_lat: 5
-        stop: null
-        weight_method: change
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      UCBLearner:
-        alpha: 0.5
-        num_lat: 5
-        stop: null
-        weight_method: change
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      UCBLearner:
-        alpha: 0.75
-        num_lat: 5
-        stop: null
-        weight_method: change
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      UCBLearner:
-        alpha: 1
-        num_lat: 5
-        stop: null
-        weight_method: change
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      UCBLearner:
-        alpha: 0.25
-        num_lat: 10
-        stop: null
-        weight_method: change
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      UCBLearner:
-        alpha: 0.5
-        num_lat: 10
-        stop: null
-        weight_method: change
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      UCBLearner:
-        alpha: 0.75
-        num_lat: 10
-        stop: null
-        weight_method: change
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      UCBLearner:
-        alpha: 1
-        num_lat: 10
-        stop: null
-        weight_method: change
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      UCBLearner:
-        alpha: 0.25
-        num_lat: 20
-        stop: null
-        weight_method: change
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      UCBLearner:
-        alpha: 0.5
-        num_lat: 20
-        stop: null
-        weight_method: change
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      UCBLearner:
-        alpha: 0.75
-        num_lat: 20
-        stop: null
-        weight_method: change
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      UCBLearner:
-        alpha: 1
-        num_lat: 20
-        stop: null
-        weight_method: change
-UCBLearnerMod:
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      UCBLearnerMod:
-        alpha: 0.25
-        num_lat: 5
-        stop: null
-        weight_method: change
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      UCBLearnerMod:
-        alpha: 0.5
-        num_lat: 5
-        stop: null
-        weight_method: change
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      UCBLearnerMod:
-        alpha: 0.75
-        num_lat: 5
-        stop: null
-        weight_method: change
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      UCBLearnerMod:
-        alpha: 1
-        num_lat: 5
-        stop: null
-        weight_method: change
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      UCBLearnerMod:
-        alpha: 0.25
-        num_lat: 10
-        stop: null
-        weight_method: change
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      UCBLearnerMod:
-        alpha: 0.5
-        num_lat: 10
-        stop: null
-        weight_method: change
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      UCBLearnerMod:
-        alpha: 0.75
-        num_lat: 10
-        stop: null
-        weight_method: change
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      UCBLearnerMod:
-        alpha: 1
-        num_lat: 10
-        stop: null
-        weight_method: change
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      UCBLearnerMod:
-        alpha: 0.25
-        num_lat: 20
-        stop: null
-        weight_method: change
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      UCBLearnerMod:
-        alpha: 0.5
-        num_lat: 20
-        stop: null
-        weight_method: change
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      UCBLearnerMod:
-        alpha: 0.75
-        num_lat: 20
-        stop: null
-        weight_method: change
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      UCBLearnerMod:
-        alpha: 1
-        num_lat: 20
-        stop: null
-        weight_method: change
-WSPB:
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPB:
-        alpha: 0.25
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPB:
-        alpha: 0.5
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPB:
-        alpha: 0.75
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPB:
-        alpha: 1
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPB:
-        alpha: 0.25
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPB:
-        alpha: 0.5
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPB:
-        alpha: 0.75
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPB:
-        alpha: 1
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPB:
-        alpha: 0.25
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPB:
-        alpha: 0.5
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPB:
-        alpha: 0.75
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPB:
-        alpha: 1
-        num_lat: 20
-WSPBPCA:
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBPCA:
-        alpha: 0.25
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBPCA:
-        alpha: 0.5
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBPCA:
-        alpha: 0.75
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBPCA:
-        alpha: 1
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBPCA:
-        alpha: 0.25
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBPCA:
-        alpha: 0.5
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBPCA:
-        alpha: 0.75
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBPCA:
-        alpha: 1
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBPCA:
-        alpha: 0.25
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBPCA:
-        alpha: 0.5
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBPCA:
-        alpha: 0.75
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBPCA:
-        alpha: 1
-        num_lat: 20
-WSPBvar:
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.25
-        lambda_u: 1.164322
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.25
-        lambda_u: 1.2315279
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.25
-        lambda_u: 1.482435
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.25
-        lambda_u: 0.5
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.25
-        lambda_u: 0.1
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.25
-        lambda_u: 0.01
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.25
-        lambda_u: 0.001
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.5
-        lambda_u: 1.164322
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.5
-        lambda_u: 1.2315279
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.5
-        lambda_u: 1.482435
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.5
-        lambda_u: 0.5
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.5
-        lambda_u: 0.1
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.5
-        lambda_u: 0.01
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.5
-        lambda_u: 0.001
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.75
-        lambda_u: 1.164322
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.75
-        lambda_u: 1.2315279
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.75
-        lambda_u: 1.482435
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.75
-        lambda_u: 0.5
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.75
-        lambda_u: 0.1
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.75
-        lambda_u: 0.01
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.75
-        lambda_u: 0.001
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 1
-        lambda_u: 1.164322
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 1
-        lambda_u: 1.2315279
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 1
-        lambda_u: 1.482435
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 1
-        lambda_u: 0.5
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 1
-        lambda_u: 0.1
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 1
-        lambda_u: 0.01
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 1
-        lambda_u: 0.001
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.25
-        lambda_u: 1.164322
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.25
-        lambda_u: 1.2315279
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.25
-        lambda_u: 1.482435
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.25
-        lambda_u: 0.5
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.25
-        lambda_u: 0.1
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.25
-        lambda_u: 0.01
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.25
-        lambda_u: 0.001
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.5
-        lambda_u: 1.164322
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.5
-        lambda_u: 1.2315279
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.5
-        lambda_u: 1.482435
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.5
-        lambda_u: 0.5
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.5
-        lambda_u: 0.1
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.5
-        lambda_u: 0.01
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.5
-        lambda_u: 0.001
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.75
-        lambda_u: 1.164322
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.75
-        lambda_u: 1.2315279
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.75
-        lambda_u: 1.482435
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.75
-        lambda_u: 0.5
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.75
-        lambda_u: 0.1
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.75
-        lambda_u: 0.01
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.75
-        lambda_u: 0.001
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 1
-        lambda_u: 1.164322
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 1
-        lambda_u: 1.2315279
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 1
-        lambda_u: 1.482435
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 1
-        lambda_u: 0.5
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 1
-        lambda_u: 0.1
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 1
-        lambda_u: 0.01
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 1
-        lambda_u: 0.001
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.25
-        lambda_u: 1.164322
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.25
-        lambda_u: 1.2315279
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.25
-        lambda_u: 1.482435
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.25
-        lambda_u: 0.5
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.25
-        lambda_u: 0.1
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.25
-        lambda_u: 0.01
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.25
-        lambda_u: 0.001
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.5
-        lambda_u: 1.164322
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.5
-        lambda_u: 1.2315279
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.5
-        lambda_u: 1.482435
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.5
-        lambda_u: 0.5
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.5
-        lambda_u: 0.1
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.5
-        lambda_u: 0.01
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.5
-        lambda_u: 0.001
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.75
-        lambda_u: 1.164322
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.75
-        lambda_u: 1.2315279
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.75
-        lambda_u: 1.482435
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.75
-        lambda_u: 0.5
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.75
-        lambda_u: 0.1
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.75
-        lambda_u: 0.01
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.75
-        lambda_u: 0.001
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 1
-        lambda_u: 1.164322
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 1
-        lambda_u: 1.2315279
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 1
-        lambda_u: 1.482435
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 1
-        lambda_u: 0.5
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 1
-        lambda_u: 0.1
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 1
-        lambda_u: 0.01
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBvar:
-        alpha: 1
-        lambda_u: 0.001
-        num_lat: 20
 OurMethod4:
 - SimpleAgent:
     action_selection_policy:
@@ -5582,487 +4521,6 @@ OurMethodEntropy:
     value_function:
       OurMethodEntropy:
         alpha: 1
-        num_lat: 20
-WSPBInit:
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.25
-        init: entropy
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.25
-        init: popularity
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.25
-        init: logpopent
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.25
-        init: rand_popularity
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.25
-        init: random
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.5
-        init: entropy
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.5
-        init: popularity
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.5
-        init: logpopent
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.5
-        init: rand_popularity
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.5
-        init: random
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.75
-        init: entropy
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.75
-        init: popularity
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.75
-        init: logpopent
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.75
-        init: rand_popularity
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.75
-        init: random
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 1
-        init: entropy
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 1
-        init: popularity
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 1
-        init: logpopent
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 1
-        init: rand_popularity
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 1
-        init: random
-        num_lat: 5
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.25
-        init: entropy
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.25
-        init: popularity
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.25
-        init: logpopent
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.25
-        init: rand_popularity
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.25
-        init: random
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.5
-        init: entropy
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.5
-        init: popularity
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.5
-        init: logpopent
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.5
-        init: rand_popularity
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.5
-        init: random
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.75
-        init: entropy
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.75
-        init: popularity
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.75
-        init: logpopent
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.75
-        init: rand_popularity
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.75
-        init: random
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 1
-        init: entropy
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 1
-        init: popularity
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 1
-        init: logpopent
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 1
-        init: rand_popularity
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 1
-        init: random
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.25
-        init: entropy
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.25
-        init: popularity
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.25
-        init: logpopent
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.25
-        init: rand_popularity
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.25
-        init: random
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.5
-        init: entropy
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.5
-        init: popularity
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.5
-        init: logpopent
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.5
-        init: rand_popularity
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.5
-        init: random
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.75
-        init: entropy
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.75
-        init: popularity
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.75
-        init: logpopent
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.75
-        init: rand_popularity
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 0.75
-        init: random
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 1
-        init: entropy
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 1
-        init: popularity
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 1
-        init: logpopent
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 1
-        init: rand_popularity
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPGreedy: {}
-    value_function:
-      WSPBInit:
-        alpha: 1
-        init: random
         num_lat: 20
 OurMethodPopularity:
 - SimpleAgent:
@@ -7670,284 +6128,6 @@ RerankedEntropyMostPopular:
           Entropy: {}
     value_function:
       MostPopular: {}
-RerankedEntropyWSPB:
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 2
-        rule:
-          Entropy: {}
-    value_function:
-      WSPB:
-        alpha: 0.75
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 2
-        rule:
-          Entropy: {}
-    value_function:
-      WSPB:
-        alpha: 0.75
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 4
-        rule:
-          Entropy: {}
-    value_function:
-      WSPB:
-        alpha: 0.75
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 4
-        rule:
-          Entropy: {}
-    value_function:
-      WSPB:
-        alpha: 0.75
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 2
-        rule:
-          Entropy: {}
-    value_function:
-      WSPB:
-        alpha: 0.5
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 2
-        rule:
-          Entropy: {}
-    value_function:
-      WSPB:
-        alpha: 0.5
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 4
-        rule:
-          Entropy: {}
-    value_function:
-      WSPB:
-        alpha: 0.5
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 4
-        rule:
-          Entropy: {}
-    value_function:
-      WSPB:
-        alpha: 0.5
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 2
-        rule:
-          Entropy: {}
-    value_function:
-      WSPB:
-        alpha: 0.25
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 2
-        rule:
-          Entropy: {}
-    value_function:
-      WSPB:
-        alpha: 0.25
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 4
-        rule:
-          Entropy: {}
-    value_function:
-      WSPB:
-        alpha: 0.25
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 4
-        rule:
-          Entropy: {}
-    value_function:
-      WSPB:
-        alpha: 0.25
-        num_lat: 10
-RerankedEntropyWSPBvar:
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 2
-        rule:
-          Entropy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.5
-        lambda_u: 1.4824
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 2
-        rule:
-          Entropy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.5
-        lambda_u: 1.4824
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 4
-        rule:
-          Entropy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.5
-        lambda_u: 1.4824
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 4
-        rule:
-          Entropy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.5
-        lambda_u: 1.4824
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 2
-        rule:
-          Entropy: {}
-    value_function:
-      WSPBvar:
-        alpha: 1.0
-        lambda_u: 0.01
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 2
-        rule:
-          Entropy: {}
-    value_function:
-      WSPBvar:
-        alpha: 1.0
-        lambda_u: 0.01
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 4
-        rule:
-          Entropy: {}
-    value_function:
-      WSPBvar:
-        alpha: 1.0
-        lambda_u: 0.01
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 4
-        rule:
-          Entropy: {}
-    value_function:
-      WSPBvar:
-        alpha: 1.0
-        lambda_u: 0.01
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 2
-        rule:
-          Entropy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.25
-        lambda_u: 1.4824
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 2
-        rule:
-          Entropy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.25
-        lambda_u: 1.4824
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 4
-        rule:
-          Entropy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.25
-        lambda_u: 1.4824
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 4
-        rule:
-          Entropy: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.25
-        lambda_u: 1.4824
-        num_lat: 10
 RerankedEntropyOurMethodEntropy:
 - SimpleAgent:
     action_selection_policy:
@@ -8879,6 +7059,284 @@ RerankedEntropyUCB:
     value_function:
       UCB:
         c: 0.25
+RerankedEntropyWSPB:
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 2
+        rule:
+          Entropy: {}
+    value_function:
+      WSPB:
+        alpha: 0.75
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 2
+        rule:
+          Entropy: {}
+    value_function:
+      WSPB:
+        alpha: 0.75
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 4
+        rule:
+          Entropy: {}
+    value_function:
+      WSPB:
+        alpha: 0.75
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 4
+        rule:
+          Entropy: {}
+    value_function:
+      WSPB:
+        alpha: 0.75
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 2
+        rule:
+          Entropy: {}
+    value_function:
+      WSPB:
+        alpha: 0.5
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 2
+        rule:
+          Entropy: {}
+    value_function:
+      WSPB:
+        alpha: 0.5
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 4
+        rule:
+          Entropy: {}
+    value_function:
+      WSPB:
+        alpha: 0.5
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 4
+        rule:
+          Entropy: {}
+    value_function:
+      WSPB:
+        alpha: 0.5
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 2
+        rule:
+          Entropy: {}
+    value_function:
+      WSPB:
+        alpha: 0.25
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 2
+        rule:
+          Entropy: {}
+    value_function:
+      WSPB:
+        alpha: 0.25
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 4
+        rule:
+          Entropy: {}
+    value_function:
+      WSPB:
+        alpha: 0.25
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 4
+        rule:
+          Entropy: {}
+    value_function:
+      WSPB:
+        alpha: 0.25
+        num_lat: 10
+RerankedEntropyWSPBvar:
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 2
+        rule:
+          Entropy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.5
+        lambda_u: 1.4824
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 2
+        rule:
+          Entropy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.5
+        lambda_u: 1.4824
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 4
+        rule:
+          Entropy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.5
+        lambda_u: 1.4824
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 4
+        rule:
+          Entropy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.5
+        lambda_u: 1.4824
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 2
+        rule:
+          Entropy: {}
+    value_function:
+      WSPBvar:
+        alpha: 1.0
+        lambda_u: 0.01
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 2
+        rule:
+          Entropy: {}
+    value_function:
+      WSPBvar:
+        alpha: 1.0
+        lambda_u: 0.01
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 4
+        rule:
+          Entropy: {}
+    value_function:
+      WSPBvar:
+        alpha: 1.0
+        lambda_u: 0.01
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 4
+        rule:
+          Entropy: {}
+    value_function:
+      WSPBvar:
+        alpha: 1.0
+        lambda_u: 0.01
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 2
+        rule:
+          Entropy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.25
+        lambda_u: 1.4824
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 2
+        rule:
+          Entropy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.25
+        lambda_u: 1.4824
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 4
+        rule:
+          Entropy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.25
+        lambda_u: 1.4824
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 4
+        rule:
+          Entropy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.25
+        lambda_u: 1.4824
+        num_lat: 10
 RerankedLinUCB:
 - SimpleAgent:
     action_selection_policy:
@@ -10085,284 +8543,6 @@ RerankedLogPopEntMostPopular:
           LogPopEnt: {}
     value_function:
       MostPopular: {}
-RerankedLogPopEntWSPB:
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 2
-        rule:
-          LogPopEnt: {}
-    value_function:
-      WSPB:
-        alpha: 0.75
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 2
-        rule:
-          LogPopEnt: {}
-    value_function:
-      WSPB:
-        alpha: 0.75
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 4
-        rule:
-          LogPopEnt: {}
-    value_function:
-      WSPB:
-        alpha: 0.75
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 4
-        rule:
-          LogPopEnt: {}
-    value_function:
-      WSPB:
-        alpha: 0.75
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 2
-        rule:
-          LogPopEnt: {}
-    value_function:
-      WSPB:
-        alpha: 0.5
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 2
-        rule:
-          LogPopEnt: {}
-    value_function:
-      WSPB:
-        alpha: 0.5
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 4
-        rule:
-          LogPopEnt: {}
-    value_function:
-      WSPB:
-        alpha: 0.5
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 4
-        rule:
-          LogPopEnt: {}
-    value_function:
-      WSPB:
-        alpha: 0.5
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 2
-        rule:
-          LogPopEnt: {}
-    value_function:
-      WSPB:
-        alpha: 0.25
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 2
-        rule:
-          LogPopEnt: {}
-    value_function:
-      WSPB:
-        alpha: 0.25
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 4
-        rule:
-          LogPopEnt: {}
-    value_function:
-      WSPB:
-        alpha: 0.25
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 4
-        rule:
-          LogPopEnt: {}
-    value_function:
-      WSPB:
-        alpha: 0.25
-        num_lat: 10
-RerankedLogPopEntWSPBvar:
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 2
-        rule:
-          LogPopEnt: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.5
-        lambda_u: 1.4824
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 2
-        rule:
-          LogPopEnt: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.5
-        lambda_u: 1.4824
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 4
-        rule:
-          LogPopEnt: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.5
-        lambda_u: 1.4824
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 4
-        rule:
-          LogPopEnt: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.5
-        lambda_u: 1.4824
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 2
-        rule:
-          LogPopEnt: {}
-    value_function:
-      WSPBvar:
-        alpha: 1.0
-        lambda_u: 0.01
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 2
-        rule:
-          LogPopEnt: {}
-    value_function:
-      WSPBvar:
-        alpha: 1.0
-        lambda_u: 0.01
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 4
-        rule:
-          LogPopEnt: {}
-    value_function:
-      WSPBvar:
-        alpha: 1.0
-        lambda_u: 0.01
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 4
-        rule:
-          LogPopEnt: {}
-    value_function:
-      WSPBvar:
-        alpha: 1.0
-        lambda_u: 0.01
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 2
-        rule:
-          LogPopEnt: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.25
-        lambda_u: 1.4824
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 2
-        rule:
-          LogPopEnt: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.25
-        lambda_u: 1.4824
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 4
-        rule:
-          LogPopEnt: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.25
-        lambda_u: 1.4824
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 4
-        rule:
-          LogPopEnt: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.25
-        lambda_u: 1.4824
-        num_lat: 10
 RerankedLogPopEntOurMethodEntropy:
 - SimpleAgent:
     action_selection_policy:
@@ -11294,6 +9474,284 @@ RerankedLogPopEntUCB:
     value_function:
       UCB:
         c: 0.25
+RerankedLogPopEntWSPB:
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 2
+        rule:
+          LogPopEnt: {}
+    value_function:
+      WSPB:
+        alpha: 0.75
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 2
+        rule:
+          LogPopEnt: {}
+    value_function:
+      WSPB:
+        alpha: 0.75
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 4
+        rule:
+          LogPopEnt: {}
+    value_function:
+      WSPB:
+        alpha: 0.75
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 4
+        rule:
+          LogPopEnt: {}
+    value_function:
+      WSPB:
+        alpha: 0.75
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 2
+        rule:
+          LogPopEnt: {}
+    value_function:
+      WSPB:
+        alpha: 0.5
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 2
+        rule:
+          LogPopEnt: {}
+    value_function:
+      WSPB:
+        alpha: 0.5
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 4
+        rule:
+          LogPopEnt: {}
+    value_function:
+      WSPB:
+        alpha: 0.5
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 4
+        rule:
+          LogPopEnt: {}
+    value_function:
+      WSPB:
+        alpha: 0.5
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 2
+        rule:
+          LogPopEnt: {}
+    value_function:
+      WSPB:
+        alpha: 0.25
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 2
+        rule:
+          LogPopEnt: {}
+    value_function:
+      WSPB:
+        alpha: 0.25
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 4
+        rule:
+          LogPopEnt: {}
+    value_function:
+      WSPB:
+        alpha: 0.25
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 4
+        rule:
+          LogPopEnt: {}
+    value_function:
+      WSPB:
+        alpha: 0.25
+        num_lat: 10
+RerankedLogPopEntWSPBvar:
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 2
+        rule:
+          LogPopEnt: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.5
+        lambda_u: 1.4824
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 2
+        rule:
+          LogPopEnt: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.5
+        lambda_u: 1.4824
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 4
+        rule:
+          LogPopEnt: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.5
+        lambda_u: 1.4824
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 4
+        rule:
+          LogPopEnt: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.5
+        lambda_u: 1.4824
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 2
+        rule:
+          LogPopEnt: {}
+    value_function:
+      WSPBvar:
+        alpha: 1.0
+        lambda_u: 0.01
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 2
+        rule:
+          LogPopEnt: {}
+    value_function:
+      WSPBvar:
+        alpha: 1.0
+        lambda_u: 0.01
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 4
+        rule:
+          LogPopEnt: {}
+    value_function:
+      WSPBvar:
+        alpha: 1.0
+        lambda_u: 0.01
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 4
+        rule:
+          LogPopEnt: {}
+    value_function:
+      WSPBvar:
+        alpha: 1.0
+        lambda_u: 0.01
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 2
+        rule:
+          LogPopEnt: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.25
+        lambda_u: 1.4824
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 2
+        rule:
+          LogPopEnt: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.25
+        lambda_u: 1.4824
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 4
+        rule:
+          LogPopEnt: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.25
+        lambda_u: 1.4824
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 4
+        rule:
+          LogPopEnt: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.25
+        lambda_u: 1.4824
+        num_lat: 10
 RerankedMostPopularGLM_UCB:
 - SimpleAgent:
     action_selection_policy:
@@ -12103,284 +10561,6 @@ RerankedMostPopularMostPopular:
           MostPopular: {}
     value_function:
       MostPopular: {}
-RerankedMostPopularWSPB:
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 2
-        rule:
-          MostPopular: {}
-    value_function:
-      WSPB:
-        alpha: 0.75
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 2
-        rule:
-          MostPopular: {}
-    value_function:
-      WSPB:
-        alpha: 0.75
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 4
-        rule:
-          MostPopular: {}
-    value_function:
-      WSPB:
-        alpha: 0.75
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 4
-        rule:
-          MostPopular: {}
-    value_function:
-      WSPB:
-        alpha: 0.75
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 2
-        rule:
-          MostPopular: {}
-    value_function:
-      WSPB:
-        alpha: 0.5
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 2
-        rule:
-          MostPopular: {}
-    value_function:
-      WSPB:
-        alpha: 0.5
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 4
-        rule:
-          MostPopular: {}
-    value_function:
-      WSPB:
-        alpha: 0.5
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 4
-        rule:
-          MostPopular: {}
-    value_function:
-      WSPB:
-        alpha: 0.5
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 2
-        rule:
-          MostPopular: {}
-    value_function:
-      WSPB:
-        alpha: 0.25
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 2
-        rule:
-          MostPopular: {}
-    value_function:
-      WSPB:
-        alpha: 0.25
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 4
-        rule:
-          MostPopular: {}
-    value_function:
-      WSPB:
-        alpha: 0.25
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 4
-        rule:
-          MostPopular: {}
-    value_function:
-      WSPB:
-        alpha: 0.25
-        num_lat: 10
-RerankedMostPopularWSPBvar:
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 2
-        rule:
-          MostPopular: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.5
-        lambda_u: 1.4824
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 2
-        rule:
-          MostPopular: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.5
-        lambda_u: 1.4824
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 4
-        rule:
-          MostPopular: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.5
-        lambda_u: 1.4824
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 4
-        rule:
-          MostPopular: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.5
-        lambda_u: 1.4824
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 2
-        rule:
-          MostPopular: {}
-    value_function:
-      WSPBvar:
-        alpha: 1.0
-        lambda_u: 0.01
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 2
-        rule:
-          MostPopular: {}
-    value_function:
-      WSPBvar:
-        alpha: 1.0
-        lambda_u: 0.01
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 4
-        rule:
-          MostPopular: {}
-    value_function:
-      WSPBvar:
-        alpha: 1.0
-        lambda_u: 0.01
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 4
-        rule:
-          MostPopular: {}
-    value_function:
-      WSPBvar:
-        alpha: 1.0
-        lambda_u: 0.01
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 2
-        rule:
-          MostPopular: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.25
-        lambda_u: 1.4824
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 2
-        rule:
-          MostPopular: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.25
-        lambda_u: 1.4824
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 4
-        rule:
-          MostPopular: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.25
-        lambda_u: 1.4824
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 4
-        rule:
-          MostPopular: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.25
-        lambda_u: 1.4824
-        num_lat: 10
 RerankedMostPopularOurMethodEntropy:
 - SimpleAgent:
     action_selection_policy:
@@ -13312,6 +11492,284 @@ RerankedMostPopularUCB:
     value_function:
       UCB:
         c: 0.25
+RerankedMostPopularWSPB:
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 2
+        rule:
+          MostPopular: {}
+    value_function:
+      WSPB:
+        alpha: 0.75
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 2
+        rule:
+          MostPopular: {}
+    value_function:
+      WSPB:
+        alpha: 0.75
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 4
+        rule:
+          MostPopular: {}
+    value_function:
+      WSPB:
+        alpha: 0.75
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 4
+        rule:
+          MostPopular: {}
+    value_function:
+      WSPB:
+        alpha: 0.75
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 2
+        rule:
+          MostPopular: {}
+    value_function:
+      WSPB:
+        alpha: 0.5
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 2
+        rule:
+          MostPopular: {}
+    value_function:
+      WSPB:
+        alpha: 0.5
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 4
+        rule:
+          MostPopular: {}
+    value_function:
+      WSPB:
+        alpha: 0.5
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 4
+        rule:
+          MostPopular: {}
+    value_function:
+      WSPB:
+        alpha: 0.5
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 2
+        rule:
+          MostPopular: {}
+    value_function:
+      WSPB:
+        alpha: 0.25
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 2
+        rule:
+          MostPopular: {}
+    value_function:
+      WSPB:
+        alpha: 0.25
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 4
+        rule:
+          MostPopular: {}
+    value_function:
+      WSPB:
+        alpha: 0.25
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 4
+        rule:
+          MostPopular: {}
+    value_function:
+      WSPB:
+        alpha: 0.25
+        num_lat: 10
+RerankedMostPopularWSPBvar:
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 2
+        rule:
+          MostPopular: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.5
+        lambda_u: 1.4824
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 2
+        rule:
+          MostPopular: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.5
+        lambda_u: 1.4824
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 4
+        rule:
+          MostPopular: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.5
+        lambda_u: 1.4824
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 4
+        rule:
+          MostPopular: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.5
+        lambda_u: 1.4824
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 2
+        rule:
+          MostPopular: {}
+    value_function:
+      WSPBvar:
+        alpha: 1.0
+        lambda_u: 0.01
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 2
+        rule:
+          MostPopular: {}
+    value_function:
+      WSPBvar:
+        alpha: 1.0
+        lambda_u: 0.01
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 4
+        rule:
+          MostPopular: {}
+    value_function:
+      WSPBvar:
+        alpha: 1.0
+        lambda_u: 0.01
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 4
+        rule:
+          MostPopular: {}
+    value_function:
+      WSPBvar:
+        alpha: 1.0
+        lambda_u: 0.01
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 2
+        rule:
+          MostPopular: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.25
+        lambda_u: 1.4824
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 2
+        rule:
+          MostPopular: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.25
+        lambda_u: 1.4824
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 4
+        rule:
+          MostPopular: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.25
+        lambda_u: 1.4824
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 4
+        rule:
+          MostPopular: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.25
+        lambda_u: 1.4824
+        num_lat: 10
 RerankedRandomGLM_UCB:
 - SimpleAgent:
     action_selection_policy:
@@ -14121,284 +12579,6 @@ RerankedRandomMostPopular:
           Random: {}
     value_function:
       MostPopular: {}
-RerankedRandomWSPB:
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 2
-        rule:
-          Random: {}
-    value_function:
-      WSPB:
-        alpha: 0.75
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 2
-        rule:
-          Random: {}
-    value_function:
-      WSPB:
-        alpha: 0.75
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 4
-        rule:
-          Random: {}
-    value_function:
-      WSPB:
-        alpha: 0.75
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 4
-        rule:
-          Random: {}
-    value_function:
-      WSPB:
-        alpha: 0.75
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 2
-        rule:
-          Random: {}
-    value_function:
-      WSPB:
-        alpha: 0.5
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 2
-        rule:
-          Random: {}
-    value_function:
-      WSPB:
-        alpha: 0.5
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 4
-        rule:
-          Random: {}
-    value_function:
-      WSPB:
-        alpha: 0.5
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 4
-        rule:
-          Random: {}
-    value_function:
-      WSPB:
-        alpha: 0.5
-        num_lat: 20
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 2
-        rule:
-          Random: {}
-    value_function:
-      WSPB:
-        alpha: 0.25
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 2
-        rule:
-          Random: {}
-    value_function:
-      WSPB:
-        alpha: 0.25
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 4
-        rule:
-          Random: {}
-    value_function:
-      WSPB:
-        alpha: 0.25
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 4
-        rule:
-          Random: {}
-    value_function:
-      WSPB:
-        alpha: 0.25
-        num_lat: 10
-RerankedRandomWSPBvar:
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 2
-        rule:
-          Random: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.5
-        lambda_u: 1.4824
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 2
-        rule:
-          Random: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.5
-        lambda_u: 1.4824
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 4
-        rule:
-          Random: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.5
-        lambda_u: 1.4824
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 4
-        rule:
-          Random: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.5
-        lambda_u: 1.4824
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 2
-        rule:
-          Random: {}
-    value_function:
-      WSPBvar:
-        alpha: 1.0
-        lambda_u: 0.01
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 2
-        rule:
-          Random: {}
-    value_function:
-      WSPBvar:
-        alpha: 1.0
-        lambda_u: 0.01
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 4
-        rule:
-          Random: {}
-    value_function:
-      WSPBvar:
-        alpha: 1.0
-        lambda_u: 0.01
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 4
-        rule:
-          Random: {}
-    value_function:
-      WSPBvar:
-        alpha: 1.0
-        lambda_u: 0.01
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 2
-        rule:
-          Random: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.25
-        lambda_u: 1.4824
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 2
-        rule:
-          Random: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.25
-        lambda_u: 1.4824
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 10
-        rerank_limit: 4
-        rule:
-          Random: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.25
-        lambda_u: 1.4824
-        num_lat: 10
-- SimpleAgent:
-    action_selection_policy:
-      ASPReranker:
-        input_filter_size: 20
-        rerank_limit: 4
-        rule:
-          Random: {}
-    value_function:
-      WSPBvar:
-        alpha: 0.25
-        lambda_u: 1.4824
-        num_lat: 10
 RerankedRandomOurMethodEntropy:
 - SimpleAgent:
     action_selection_policy:
@@ -15330,6 +13510,284 @@ RerankedRandomUCB:
     value_function:
       UCB:
         c: 0.25
+RerankedRandomWSPB:
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 2
+        rule:
+          Random: {}
+    value_function:
+      WSPB:
+        alpha: 0.75
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 2
+        rule:
+          Random: {}
+    value_function:
+      WSPB:
+        alpha: 0.75
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 4
+        rule:
+          Random: {}
+    value_function:
+      WSPB:
+        alpha: 0.75
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 4
+        rule:
+          Random: {}
+    value_function:
+      WSPB:
+        alpha: 0.75
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 2
+        rule:
+          Random: {}
+    value_function:
+      WSPB:
+        alpha: 0.5
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 2
+        rule:
+          Random: {}
+    value_function:
+      WSPB:
+        alpha: 0.5
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 4
+        rule:
+          Random: {}
+    value_function:
+      WSPB:
+        alpha: 0.5
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 4
+        rule:
+          Random: {}
+    value_function:
+      WSPB:
+        alpha: 0.5
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 2
+        rule:
+          Random: {}
+    value_function:
+      WSPB:
+        alpha: 0.25
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 2
+        rule:
+          Random: {}
+    value_function:
+      WSPB:
+        alpha: 0.25
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 4
+        rule:
+          Random: {}
+    value_function:
+      WSPB:
+        alpha: 0.25
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 4
+        rule:
+          Random: {}
+    value_function:
+      WSPB:
+        alpha: 0.25
+        num_lat: 10
+RerankedRandomWSPBvar:
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 2
+        rule:
+          Random: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.5
+        lambda_u: 1.4824
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 2
+        rule:
+          Random: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.5
+        lambda_u: 1.4824
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 4
+        rule:
+          Random: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.5
+        lambda_u: 1.4824
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 4
+        rule:
+          Random: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.5
+        lambda_u: 1.4824
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 2
+        rule:
+          Random: {}
+    value_function:
+      WSPBvar:
+        alpha: 1.0
+        lambda_u: 0.01
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 2
+        rule:
+          Random: {}
+    value_function:
+      WSPBvar:
+        alpha: 1.0
+        lambda_u: 0.01
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 4
+        rule:
+          Random: {}
+    value_function:
+      WSPBvar:
+        alpha: 1.0
+        lambda_u: 0.01
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 4
+        rule:
+          Random: {}
+    value_function:
+      WSPBvar:
+        alpha: 1.0
+        lambda_u: 0.01
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 2
+        rule:
+          Random: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.25
+        lambda_u: 1.4824
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 2
+        rule:
+          Random: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.25
+        lambda_u: 1.4824
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 10
+        rerank_limit: 4
+        rule:
+          Random: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.25
+        lambda_u: 1.4824
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPReranker:
+        input_filter_size: 20
+        rerank_limit: 4
+        rule:
+          Random: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.25
+        lambda_u: 1.4824
+        num_lat: 10
 TSEnsemble_Entropy:
 - SimpleEnsembleAgent:
     action_selection_policy:
@@ -15612,6 +14070,1439 @@ UCBLearner:
       UCBLearner:
         num_lat: 10
         stop: 14
+UCBLearnerMod:
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      UCBLearnerMod:
+        alpha: 0.25
+        num_lat: 5
+        stop: null
+        weight_method: change
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      UCBLearnerMod:
+        alpha: 0.5
+        num_lat: 5
+        stop: null
+        weight_method: change
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      UCBLearnerMod:
+        alpha: 0.75
+        num_lat: 5
+        stop: null
+        weight_method: change
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      UCBLearnerMod:
+        alpha: 1
+        num_lat: 5
+        stop: null
+        weight_method: change
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      UCBLearnerMod:
+        alpha: 0.25
+        num_lat: 10
+        stop: null
+        weight_method: change
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      UCBLearnerMod:
+        alpha: 0.5
+        num_lat: 10
+        stop: null
+        weight_method: change
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      UCBLearnerMod:
+        alpha: 0.75
+        num_lat: 10
+        stop: null
+        weight_method: change
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      UCBLearnerMod:
+        alpha: 1
+        num_lat: 10
+        stop: null
+        weight_method: change
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      UCBLearnerMod:
+        alpha: 0.25
+        num_lat: 20
+        stop: null
+        weight_method: change
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      UCBLearnerMod:
+        alpha: 0.5
+        num_lat: 20
+        stop: null
+        weight_method: change
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      UCBLearnerMod:
+        alpha: 0.75
+        num_lat: 20
+        stop: null
+        weight_method: change
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      UCBLearnerMod:
+        alpha: 1
+        num_lat: 20
+        stop: null
+        weight_method: change
+WSPB:
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPB:
+        alpha: 0.25
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPB:
+        alpha: 0.5
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPB:
+        alpha: 0.75
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPB:
+        alpha: 1
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPB:
+        alpha: 0.25
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPB:
+        alpha: 0.5
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPB:
+        alpha: 0.75
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPB:
+        alpha: 1
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPB:
+        alpha: 0.25
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPB:
+        alpha: 0.5
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPB:
+        alpha: 0.75
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPB:
+        alpha: 1
+        num_lat: 20
+WSPBInit:
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.25
+        init: entropy
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.25
+        init: popularity
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.25
+        init: logpopent
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.25
+        init: rand_popularity
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.25
+        init: random
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.5
+        init: entropy
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.5
+        init: popularity
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.5
+        init: logpopent
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.5
+        init: rand_popularity
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.5
+        init: random
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.75
+        init: entropy
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.75
+        init: popularity
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.75
+        init: logpopent
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.75
+        init: rand_popularity
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.75
+        init: random
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 1
+        init: entropy
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 1
+        init: popularity
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 1
+        init: logpopent
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 1
+        init: rand_popularity
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 1
+        init: random
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.25
+        init: entropy
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.25
+        init: popularity
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.25
+        init: logpopent
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.25
+        init: rand_popularity
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.25
+        init: random
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.5
+        init: entropy
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.5
+        init: popularity
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.5
+        init: logpopent
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.5
+        init: rand_popularity
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.5
+        init: random
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.75
+        init: entropy
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.75
+        init: popularity
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.75
+        init: logpopent
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.75
+        init: rand_popularity
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.75
+        init: random
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 1
+        init: entropy
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 1
+        init: popularity
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 1
+        init: logpopent
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 1
+        init: rand_popularity
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 1
+        init: random
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.25
+        init: entropy
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.25
+        init: popularity
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.25
+        init: logpopent
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.25
+        init: rand_popularity
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.25
+        init: random
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.5
+        init: entropy
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.5
+        init: popularity
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.5
+        init: logpopent
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.5
+        init: rand_popularity
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.5
+        init: random
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.75
+        init: entropy
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.75
+        init: popularity
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.75
+        init: logpopent
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.75
+        init: rand_popularity
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 0.75
+        init: random
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 1
+        init: entropy
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 1
+        init: popularity
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 1
+        init: logpopent
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 1
+        init: rand_popularity
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBInit:
+        alpha: 1
+        init: random
+        num_lat: 20
+WSPBPCA:
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBPCA:
+        alpha: 0.25
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBPCA:
+        alpha: 0.5
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBPCA:
+        alpha: 0.75
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBPCA:
+        alpha: 1
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBPCA:
+        alpha: 0.25
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBPCA:
+        alpha: 0.5
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBPCA:
+        alpha: 0.75
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBPCA:
+        alpha: 1
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBPCA:
+        alpha: 0.25
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBPCA:
+        alpha: 0.5
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBPCA:
+        alpha: 0.75
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBPCA:
+        alpha: 1
+        num_lat: 20
+WSPBvar:
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.25
+        lambda_u: 1.164322
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.25
+        lambda_u: 1.2315279
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.25
+        lambda_u: 1.482435
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.25
+        lambda_u: 0.5
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.25
+        lambda_u: 0.1
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.25
+        lambda_u: 0.01
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.25
+        lambda_u: 0.001
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.5
+        lambda_u: 1.164322
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.5
+        lambda_u: 1.2315279
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.5
+        lambda_u: 1.482435
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.5
+        lambda_u: 0.5
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.5
+        lambda_u: 0.1
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.5
+        lambda_u: 0.01
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.5
+        lambda_u: 0.001
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.75
+        lambda_u: 1.164322
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.75
+        lambda_u: 1.2315279
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.75
+        lambda_u: 1.482435
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.75
+        lambda_u: 0.5
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.75
+        lambda_u: 0.1
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.75
+        lambda_u: 0.01
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.75
+        lambda_u: 0.001
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 1
+        lambda_u: 1.164322
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 1
+        lambda_u: 1.2315279
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 1
+        lambda_u: 1.482435
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 1
+        lambda_u: 0.5
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 1
+        lambda_u: 0.1
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 1
+        lambda_u: 0.01
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 1
+        lambda_u: 0.001
+        num_lat: 5
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.25
+        lambda_u: 1.164322
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.25
+        lambda_u: 1.2315279
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.25
+        lambda_u: 1.482435
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.25
+        lambda_u: 0.5
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.25
+        lambda_u: 0.1
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.25
+        lambda_u: 0.01
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.25
+        lambda_u: 0.001
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.5
+        lambda_u: 1.164322
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.5
+        lambda_u: 1.2315279
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.5
+        lambda_u: 1.482435
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.5
+        lambda_u: 0.5
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.5
+        lambda_u: 0.1
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.5
+        lambda_u: 0.01
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.5
+        lambda_u: 0.001
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.75
+        lambda_u: 1.164322
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.75
+        lambda_u: 1.2315279
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.75
+        lambda_u: 1.482435
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.75
+        lambda_u: 0.5
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.75
+        lambda_u: 0.1
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.75
+        lambda_u: 0.01
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.75
+        lambda_u: 0.001
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 1
+        lambda_u: 1.164322
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 1
+        lambda_u: 1.2315279
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 1
+        lambda_u: 1.482435
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 1
+        lambda_u: 0.5
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 1
+        lambda_u: 0.1
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 1
+        lambda_u: 0.01
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 1
+        lambda_u: 0.001
+        num_lat: 10
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.25
+        lambda_u: 1.164322
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.25
+        lambda_u: 1.2315279
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.25
+        lambda_u: 1.482435
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.25
+        lambda_u: 0.5
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.25
+        lambda_u: 0.1
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.25
+        lambda_u: 0.01
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.25
+        lambda_u: 0.001
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.5
+        lambda_u: 1.164322
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.5
+        lambda_u: 1.2315279
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.5
+        lambda_u: 1.482435
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.5
+        lambda_u: 0.5
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.5
+        lambda_u: 0.1
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.5
+        lambda_u: 0.01
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.5
+        lambda_u: 0.001
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.75
+        lambda_u: 1.164322
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.75
+        lambda_u: 1.2315279
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.75
+        lambda_u: 1.482435
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.75
+        lambda_u: 0.5
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.75
+        lambda_u: 0.1
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.75
+        lambda_u: 0.01
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 0.75
+        lambda_u: 0.001
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 1
+        lambda_u: 1.164322
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 1
+        lambda_u: 1.2315279
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 1
+        lambda_u: 1.482435
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 1
+        lambda_u: 0.5
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 1
+        lambda_u: 0.1
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 1
+        lambda_u: 0.01
+        num_lat: 20
+- SimpleAgent:
+    action_selection_policy:
+      ASPGreedy: {}
+    value_function:
+      WSPBvar:
+        alpha: 1
+        lambda_u: 0.001
+        num_lat: 20
 kNNBandit:
 - SimpleAgent:
     action_selection_policy:
