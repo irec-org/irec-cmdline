@@ -11,16 +11,18 @@ LinUCBvar:
   name: LinUCBvar (MF)
 UCBLearner:
   name: Old UCB-Learner
-WSPB:
-  name: WSPB
+WSCB:
+  name: WSCB
+OurMethod2:
+  name: OurMethod2
 OurMethod3:
-  name: WSPB Oracle
+  name: WSCB Oracle
 OurMethod4:
-  name: WSPB Parameters-based
+  name: WSCB Parameters-based
 OurMethod5:
-  name: WSPB time-aware
+  name: WSCB time-aware
 OurMethodBalanced:
-  name: WSPB uncertainty-based
+  name: WSCB uncertainty-based
 LinearUCB:
   #name: Linear UCB (PMF)
   name: Linear UCB
@@ -66,18 +68,18 @@ Entropy:
   name: Entropy
 LogPopEnt:
   name: log(Pop)⋅Ent
-WSPBInit:
-  name: WSPB Init
+WSCBInit:
+  name: WSCB Init
 OurMethodEntropy:
-  name: WSPB Entropy
+  name: WSCB Entropy
 OurMethodPopularity:
-  name: WSPB Pop
+  name: WSCB Pop
 OurMethodRandPopularity:
-  name: WSPB Rand Pop
+  name: WSCB Rand Pop
 OurMethodRandom:
-  name: WSPB Random
-WSPBvar:
-  name: WSPB var
+  name: WSCB Random
+WSCBvar:
+  name: WSCB var
 LinearUCBInit:
   name: Linear UCB (PMF) Init
 LinearUCBEntropy:
@@ -100,8 +102,8 @@ LinearEGreedyRandom:
   name: Linear e-Greedy (PMF) Random
 LinearEGreedyLogPopEnt:
   name: e-Greedy*
-WSPBPCA:
-  name: WSPB PCA
+WSCBPCA:
+  name: WSCB PCA
 LinUCBPCA:
   name: LinUCB PCA
 ICTRTS:
@@ -142,8 +144,8 @@ TSEnsemble_Random:
 ClusterBandit:
   name: Cluster Bandit
 OurMethodZero:
-  name: WSPB (p=0)
+  name: WSCB (p=0)
 OurMethodOne:
-  name: WSPB (p=1)
+  name: WSCB (p=1)
 ICBandit:
   name: ICBandit

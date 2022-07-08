@@ -20,23 +20,19 @@ Under app/ folder is a example of a application using iRec and MLflow, where dif
 
 Check this example of a execution using the example application:
 
-    cd app
-    metrics=(Hits Precision Recall);
-    models=(Random MostPopular UCB ThompsonSampling EGreedy);
-    metric_evaluator="IterationsMetricEvaluator"
-    bases=("Netflix 10k" "Good Books" "Yahoo Music 10k");
-    # run agents
-    ./run_agent_best.py --dataset_loaders "${bases[@]}" --agents "${models[@]}"
+    dataset=("Netflix 10k" "Good Books" "Yahoo Music 10k");\
+    models=(Random MostPopular UCB ThompsonSampling EGreedy);\
+    metrics=(Hits Precision Recall);\
+    eval_pol=("FixedInteraction");
+    metric_evaluator="Interaction";\
+    
+    cd app/scripts/agents &&
+    python run_agent_best.py --agents "${models[@]}" --dataset_loaders "${dataset[@]}" --evaluation_policy "${eval_pol[@]}" &&
   
-    # evaluate agents using the metrics and metric evaluator defined
-    ./eval_agent_best.py --dataset_loaders "${bases[@]}"\
-    --agents "${models[@]}" --metrics "${metrics[@]}"\
-    --metric_evaluator="$metric_evaluator"
+    cd ../evaluation &&
+    python eval_agent_best.py --agents "${models[@]}" --dataset_loaders "${dataset[@]}" --evaluation_policy "${eval_pol[@]}" --metrics "${metrics[@]}" --metric_evaluator "${metric_eval[@]}" &&
 
-    # print latex table with results and statistical test
-    ./print_latex_table_results.py --dataset_loaders "${bases[@]}"\
-    --agents "${models[@]}" --metrics "${metrics[@]}"\
-    --metric_evaluator="$metric_evaluator"
+    python print_latex_table_results.py --agents "${models[@]}" --dataset_loaders "${dataset[@]}" --evaluation_policy "${eval_pol[@]}" --metric_evaluator "${metric_eval[@]}" --metrics "${metrics[@]}"
 
 <!--Also, check these examples using the framework in Python code:-->
 
@@ -53,21 +49,29 @@ For more details on configuration files, go to [**configuration_files**](tutoria
 This configuration file stores all the configurations related to the bases that will be used during the execution of an experiment.
 
 ```yaml
-'MovieLens 1M':
-  DefaultDatasetLoader:
-    dataset_path: ./data/datasets/MovieLens 1M/
-    prefiltering:
-      test_consumes: 5
-      #filter_users:
-      #  min_consumption: 50
-      #  num_users: 100
-      #filter_items: 
-      #  min_ratings: 1
-      #  num_items: 100
-    splitting:
+'MovieLens 100k': # Dataset name
+  FullData: # Loader method
+    dataset: # Info dataset
+      path: ./data/datasets/MovieLens 100k/ratings.csv
+      random_seed: 0
+      file_delimiter: ","
+      skip_head: true
+
+    prefiltering: # Filters
+      filter_users: # By Users
+        min_consumption: 50
+        num_users: 100
+      filter_items: # By Items
+        min_ratings: 1
+        num_items: 100
+
+    splitting: # Splitting
       strategy: temporal
-      #random_seed: 0 (for splitting: random)
       train_size: 0.8
+      test_consumes: 5
+
+    validation:
+      validation_size: 0.2
 ︙
 ```
 
@@ -76,7 +80,7 @@ This configuration file stores all the configurations related to the bases that 
 This configuration file stores the settings of the agents (Recommenders) that will be used in the experiments.
 
 ```yaml
-'MovieLens 1M':
+'MovieLens 100k':
   EGreedy:
     SimpleAgent:
       action_selection_policy:
@@ -107,12 +111,23 @@ This configuration file stores the settings of the agents (Recommenders) that wi
 In this configuration file it is possible to define a search field for the variables of each agent, which will be used during the grid search
 
 ```yaml
-PTS:
-  num_lat: [10,20,30,40,50]
-  num_particles: linspace(1,10,5)
-  var: linspace(0.1,1,10)
-  var_u: linspace(0.1,1,10)
-  var_v: linspace(0.1,1,10)
+GridSearch:
+
+  - EGreedy:
+      SimpleAgent:
+        action_selection_policy:
+          ASPEGreedy:
+            epsilon: linspace(0.001, 1, 10)
+        value_function:
+          EGreedy: {}
+
+  - UCB:
+      SimpleAgent:
+        action_selection_policy:
+          ASPGreedy: {}
+        value_function:
+          UCB:
+            c: linspace(0.001, 1, 10)
 ```
 
 [**evaluation_policies.yaml**](app/settings/evaluation_policies.yaml)
@@ -158,7 +173,7 @@ agent: LinearUCB
 agent_experiment: agent
 data_dir: data/
 dataset_experiment: dataset
-dataset_loader: 'MovieLens 1M'
+dataset_loader: 'MovieLens 100k'
 evaluation_experiment: evaluation
 evaluation_policy: Interaction
 metric: Hits

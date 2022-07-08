@@ -8,5 +8,4 @@ from irec.connector.utils import download_data
 parser = argparse.ArgumentParser()
 parser.add_argument('--dataset_name', nargs="*", required=True, type=str, help='Name of dataset')
 args = parser.parse_args()
-print(args)
 download_data(args.dataset_name)
