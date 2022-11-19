@@ -4,7 +4,7 @@
   FullData:
 
     dataset:
-      path: ./data/datasets/MovieLens 100k/ratings.csv
+      path: ./data/datasets/Netflix 10k/ratings.csv
       random_seed: 0
       file_delimiter: ","
       skip_head: true
@@ -13,6 +13,23 @@
       strategy: global
       train_size: 0.8
       test_consumes: 5
+
+    validation:
+      validation_size: 0.2
+
+"Netflix 10k":
+  FullData:
+
+    dataset:
+      path: ./data/datasets/Netflix 10k/ratings.csv
+      random_seed: 0
+      file_delimiter: ","
+      skip_head: true
+
+    splitting:
+      strategy: temporal
+      train_size: 0.8
+      test_consumes: 5  
 
     validation:
       validation_size: 0.2
@@ -259,23 +276,6 @@
       file_delimiter: ","
       skip_head: true
       
-    splitting:
-      strategy: temporal
-      train_size: 0.8
-      test_consumes: 5  
-
-    validation:
-      validation_size: 0.2
-
-"Netflix 10k":
-  FullData:
-
-    dataset:
-      path: ./data/datasets/Netflix 10k/ratings.csv
-      random_seed: 0
-      file_delimiter: ","
-      skip_head: true
-
     splitting:
       strategy: temporal
       train_size: 0.8
