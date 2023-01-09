@@ -21,8 +21,6 @@ parser.add_argument(
 )
 parser.add_argument("--agents", nargs="*", default=[settings["defaults"]["agent"]])
 
-parser.add_argument("--tasks", type=int, default=os.cpu_count())
-
 args = parser.parse_args()
 
 dataset_agents_parameters = yaml.load(
