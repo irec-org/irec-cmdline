@@ -1,81 +1,29 @@
 GridSearch:
+# Baselines ---------------------------------------------------------
+  - UCB:
+        SimpleAgent:
+          action_selection_policy:
+            ASPGreedy: {}
+          value_function:
+            UCB:
+              c: [0.01, 0.02, 0.003, 0.1]
 
-  - WSCB:
-      SimpleAgent:
-        action_selection_policy:
-          ASPGreedy: {}
-        value_function:
-          WSCB:
-            alpha: linspace(0.1, 1, 10)
-            num_lat: [5, 10, 20]
+  - ThompsonSampling:
+        SimpleAgent:
+          action_selection_policy:
+            ASPGreedy: {}
+          value_function:
+            ThompsonSampling:
+              alpha_0: linspace(0.1, 1, 10)
+              beta_0: linspace(1, 100, 10)
 
   - EGreedy:
       SimpleAgent:
         action_selection_policy:
           ASPEGreedy:
-            # epsilon: linspace(0.001, 1, 10)
-            epsilon: [0.4,0.01,0.001]
+            epsilon: [0.4, 0.01, 0.001]
         value_function:
           EGreedy: {}
-
-  - UCB:
-      SimpleAgent:
-        action_selection_policy:
-          ASPGreedy: {}
-        value_function:
-          UCB:
-            # c: linspace(0.001, 1, 10)
-            c: [0.01,0.02,0.003,0.1]
-
-  - LinearUCB:
-      SimpleAgent:
-        action_selection_policy:
-          ASPGreedy: {}
-        value_function:
-          LinearUCB:
-            alpha: linspace(0.1, 1, 10)
-            item_var: 0.01
-            iterations: 20
-            num_lat: [10, 15, 20]
-            stop_criteria: 0.0009
-            user_var: 0.01
-            var: 0.05
-
-  - LinearEGreedy:
-      SimpleAgent:
-        action_selection_policy:
-          ASPEGreedy:
-            epsilon: linspace(0.001, 1, 10)
-            # epsilon: linspace(0.1, 1, 5)
-        value_function:
-          LinearEGreedy:
-            item_var: 0.01
-            iterations: 20
-            num_lat: [10, 15, 20]
-            stop_criteria: 0.0009
-            user_var: 0.01
-            var: 0.05
-    
-  - ThompsonSampling:
-      SimpleAgent:
-        action_selection_policy:
-          ASPGreedy: {}
-        value_function:
-          ThompsonSampling:
-            alpha_0: linspace(0.1, 1, 10)
-            beta_0: linspace(1, 100, 10)
-
-  - PTS:
-      SimpleAgent:
-        action_selection_policy:
-          ASPGreedy: {}
-        value_function:
-          PTS:
-            num_lat: 10
-            num_particles: [5, 10]
-            var: linspace(0.01, 0.5, 4)
-            var_u: linspace(0.01, 0.5, 4)
-            var_v: linspace(0.3, 5.0, 3)
 
   - GLM_UCB:
       SimpleAgent:
@@ -111,6 +59,15 @@ GridSearch:
             time_step: 3
             training_epoch: 30000
 
+  - ICTRTS:
+        SimpleAgent:
+          action_selection_policy:
+            ASPGreedy: {}
+          value_function:
+            ICTRTS:
+              num_lat: [5, 10, 20]
+              num_particles: [2, 5, 10]
+
   - ClusterBandit:
       SimpleAgent:
         action_selection_policy:
@@ -123,11 +80,114 @@ GridSearch:
             num_clusters: [4, 8]
             num_lat: [5, 10, 20]
 
-  - ICTRTS:
+# ----------------------------------------------------------------------
+
+  - LinearEGreedy:
+      SimpleAgent:
+        action_selection_policy:
+          ASPEGreedy:
+            epsilon: linspace(0.001, 1, 5)
+        value_function:
+          LinearEGreedy:
+            item_var: 0.01
+            iterations: 20
+            num_lat: [10, 15, 20]
+            stop_criteria: 0.0009
+            user_var: 0.01
+            var: 0.05
+
+  - ContextualEgreedy_Te0:
+      SimpleAgent:
+        action_selection_policy:
+          ASPMismatchEgreedy:
+              epsilon: linspace(0.001, 1, 5)
+              k: 0
+        value_function:
+          ContextualEgreedy:
+              item_var: 0.01
+              iterations: 20
+              num_lat: [10, 15, 20]
+              stop_criteria: 0.0009
+              user_var: 0.01
+              var: 0.05
+
+  - ContextualEgreedy_Tge0:
+      SimpleAgent:
+        action_selection_policy:
+          ASPMismatchEgreedy:
+              epsilon: linspace(0.001, 1, 5)
+              k: [5, 10, 20]
+        value_function:
+          ContextualEgreedy:
+              item_var: 0.01
+              iterations: 20
+              num_lat: [10, 15, 20]
+              stop_criteria: 0.0009
+              user_var: 0.01
+              var: 0.05
+  - PTS:
       SimpleAgent:
         action_selection_policy:
           ASPGreedy: {}
         value_function:
-          ICTRTS:
+          PTS:
+            num_lat: [10, 20]
+            num_particles: [5, 10]
+            var: linspace(0.01, 0.5, 3)
+            var_u: linspace(0.01, 0.5, 3)
+            var_v: linspace(0.3, 5.0, 3)
+
+  - ContextualPTS_Te0:
+      SimpleAgent:
+        action_selection_policy:
+          ASPMismatchGreedy:
+            k: 0
+        value_function:
+          ContextualPTS:
+            num_lat: [10, 20]
+            num_particles: [5, 10]
+            var: linspace(0.01, 0.5, 3)
+            var_u: linspace(0.01, 0.5, 3)
+            var_v: linspace(0.3, 5.0, 3)
+
+  - ContextualPTS_Tge0:
+      SimpleAgent:
+        action_selection_policy:
+          ASPMismatchGreedy:
+            k: [5, 10, 20]
+        value_function:
+          ContextualPTS:
+            num_lat: [10, 20]
+            num_particles: [5, 10]
+            var: linspace(0.01, 0.5, 3)
+            var_u: linspace(0.01, 0.5, 3)
+            var_v: linspace(0.3, 5.0, 3)
+
+  - LinUCB:
+      SimpleAgent:
+        action_selection_policy:
+          ASPGreedy: {}
+        value_function:
+          LinUCB:
+            alpha: linspace(0.1, 1, 5)
             num_lat: [5, 10, 20]
-            num_particles: [2, 5, 10]
+
+  - ContextualLinUCB_Te0:
+      SimpleAgent:
+        action_selection_policy:
+          ASPMismatchGreedy:
+            k: 0
+        value_function:
+          ContextualLinUCB:
+            alpha: linspace(0.1, 1, 5)
+            num_lat: [5, 10, 20]
+
+  - ContextualLinUCB_Tge0:
+      SimpleAgent:
+        action_selection_policy:
+          ASPMismatchGreedy:
+            k: [5, 10, 20]
+        value_function:
+          ContextualLinUCB:
+            alpha: linspace(0.1, 1, 5)
+            num_lat: [5, 10, 20]

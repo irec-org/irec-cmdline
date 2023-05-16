@@ -1,151 +1,62 @@
-NICF:
-  name: NICF
-PTS:
-  name: PTS
 Random:
   name: Random
-  #name: Rand
-LinUCB:
-  name: LinUCB (MF)
-LinUCBvar:
-  name: LinUCBvar (MF)
-UCBLearner:
-  name: Old UCB-Learner
-WSCB:
-  name: WSCB
-OurMethod2:
-  name: OurMethod2
-OurMethod3:
-  name: WSCB Oracle
-OurMethod4:
-  name: WSCB Parameters-based
-OurMethod5:
-  name: WSCB time-aware
-OurMethodBalanced:
-  name: WSCB uncertainty-based
-LinearUCB:
-  #name: Linear UCB (PMF)
-  name: Linear UCB
-LinearUCB1:
-  name: Linear UCB (p=1) (PMF)
-COFIBA:
-  name: COFIBA
-ThompsonSampling:
-  name: TS
-kNNBandit:
-  name: kNN
+
 MostPopular:
   name: Popular
-LinEGreedy:
-  name: Linear e-Greedy (MF)
-PPELPE:
-  name: PPELPE
-GLM_UCB:
-  #name: GLM-UCB (PMF)
-  name: GLM-UCB
-LinearEGreedy:
-  #name: Linear e-Greedy
-  name: e-Greedy
-LinearThompsonSampling:
-  name: Linear TS (PMF)
-EGreedy:
-  name: e-Greedy
+
 UCB:
   name: UCB
-MostRepresentative:
-  name: Most Representative
-Entropy0:
-  name: Entropy0
-HELF:
-  name: HELF
-PopPlusEnt:
-  name: Pop+Ent
-DistinctPopular:
-  name: Distinct Popular
-EMostPopular:
-  name: e-Most Popular
-Entropy:
-  name: Entropy
-LogPopEnt:
-  name: log(Pop)⋅Ent
-WSCBInit:
-  name: WSCB Init
-OurMethodEntropy:
-  name: WSCB Entropy
-OurMethodPopularity:
-  name: WSCB Pop
-OurMethodRandPopularity:
-  name: WSCB Rand Pop
-OurMethodRandom:
-  name: WSCB Random
-WSCBvar:
-  name: WSCB var
-LinearUCBInit:
-  name: Linear UCB (PMF) Init
-LinearUCBEntropy:
-  name: Linear UCB (PMF) Entropy
-LinearUCBPopularity:
-  name: Linear UCB (PMF) Pop
-LinearUCBRandPopularity:
-  name: Linear UCB (PMF) Rand Pop
-LinearUCBRandom:
-  name: Linear UCB (PMF) Random
-LinearUCBLogPopEnt:
-  name: Linear UCB*
-LinearEGreedyEntropy:
-  name: Linear e-Greedy (PMF) Entropy
-LinearEGreedyPopularity:
-  name: Linear e-Greedy (PMF) Pop
-LinearEGreedyRandPopularity:
-  name: Linear e-Greedy (PMF) Rand Pop
-LinearEGreedyRandom:
-  name: Linear e-Greedy (PMF) Random
-LinearEGreedyLogPopEnt:
-  name: e-Greedy*
-WSCBPCA:
-  name: WSCB PCA
-LinUCBPCA:
-  name: LinUCB PCA
+
+ThompsonSampling:
+  name: TS
+
+LinearEGreedy:
+  name: e-Greedy
+
+EGreedy:
+  name: e-Greedy
+
+LinearUCB:
+  name: LinearUCB
+
+GLM_UCB:
+  name: GLM-UCB
+
+NICF:
+  name: NICF
+
+PTS:
+  name: PTS
+
 ICTRTS:
   name: ICTRTS
-PTSLogPopEnt:
-  name: PTS*
-GLM_UCBLogPopEnt:
-  #name: GLM_UCB+
-  name: GLM-UCB*
-LinUCBEntropy:
-  name: LinUCB Entropy
-RerankedEntropyGLM_UCB:
-  name: RerankedEntropy GLM-UCB
-RerankedEntropyLinUCB:
-  name: RerankedEntropy LinUCB
-RerankedEntropyLinearEGreedy:
-  name: RerankedEntropy LinearEGreedy
-RerankedEntropyLinearUCB:
-  name: RerankedEntropy LinearUCB
-RerankedLogPopEntGLM_UCB:
-  name: RerankedLogPopEnt GLM-UCB
-RerankedLogPopEntLinUCB:
-  name: RerankedLogPopEnt LinUCB
-RerankedLogPopEntLinearEGreedy:
-  name: RerankedLogPopEnt LinearEGreedy
-RerankedLogPopEntLinearUCB:
-  name: RerankedLogPopEnt LinearUCB
-NaiveEnsemble:
-  name: Naive Ensemble
-TSEnsemble_Pop:
-  name: TSEnsemble-Pop
-TSEnsemble_PopEnt:
-  name: TSEnsemble-PopEnt
-TSEnsemble_Entropy:
-  name: TSEnsemble-Entropy
-TSEnsemble_Random:
-  name: TSEnsemble-Random
+
 ClusterBandit:
   name: Cluster Bandit
-OurMethodZero:
-  name: WSCB (p=0)
-OurMethodOne:
-  name: WSCB (p=1)
-ICBandit:
-  name: ICBandit
+
+LinearEGreedy:
+  name: LinearEGreedy
+
+ContextualEgreedy_Te0:
+  name: LinearEGreedy$_{t=0}$
+
+ContextualEgreedy_Tge0:
+  name: LinearEGreedy$_{t>=0}$
+
+PTS:
+  name: PTS
+
+ContextualPTS_Te0:
+  name: PTS$_{t=0}$
+
+ContextualPTS_Tge0:
+  name: PTS$_{t>=0}$
+
+LinUCB:
+  name: LinUCB
+
+ContextualLinUCB_Te0:
+  name: LinUCB$_{t=0}$
+
+ContextualLinUCB_Tge0:
+  name: LinUCB$_{t>=0}$

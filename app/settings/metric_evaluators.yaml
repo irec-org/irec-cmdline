@@ -4,9 +4,9 @@ CumulativeInteraction:
     - 5
     - 10
     - 20
-    # - 50
-    # - 100
-  num_interactions: 20
+    - 50
+    - 100
+  num_interactions: 100
   relevance_evaluator_threshold: 3.999
 Cumulative:
   buffer_size: 1000000
@@ -27,9 +27,9 @@ UserCumulativeInteraction:
     - 5
     - 10
     - 20
-    # - 50
-    # - 100
-  num_interactions: 20
+    - 50
+    - 100
+  num_interactions: 100
   relevance_evaluator_threshold: 3.999
 
 StageIterations:

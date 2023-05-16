@@ -1,8 +1,5 @@
-#Default Loaders
-
-'Netflix 10k':
+MovieLens 100k:
   FullData:
-
     dataset:
       path: ./data/datasets/MovieLens 100k/ratings.csv
       random_seed: 0
@@ -17,259 +14,8 @@
     validation:
       validation_size: 0.2
 
-'Yelp Philadelphia':
+Netflix 10k:
   FullData:
-
-    dataset:
-      path: ./data/datasets/Yelp Philadelphia/ratings.csv
-      random_seed: 0
-      file_delimiter: ","
-      skip_head: true
-
-    splitting:
-      # strategy: temporal
-      strategy: user_history
-      train_size: 0.8
-      test_consumes: 5
-
-    validation:
-      validation_size: 0.2
-
-
-'Yelp POI New Orleans':
-  FullData:
-
-    dataset:
-      path: ./data/datasets/Yelp POI New Orleans/ratings.csv
-      random_seed: 0
-      file_delimiter: ","
-      skip_head: true
-
-    splitting:
-      # strategy: temporal
-      strategy: user_history
-      train_size: 0.8
-      test_consumes: 5
-
-    validation:
-      validation_size: 0.2
-
-
-'Yelp POI Nashville':
-  FullData:
-
-    dataset:
-      path: ./data/datasets/Yelp POI Nashville/ratings.csv
-      random_seed: 0
-      file_delimiter: ","
-      skip_head: true
-
-    splitting:
-      # strategy: temporal
-      strategy: user_history
-      train_size: 0.8
-      test_consumes: 5
-
-    validation:
-      validation_size: 0.2
-
-
-'MovieLens 100k':
-  FullData:
-
-    dataset:
-      path: ./data/datasets/MovieLens 100k/ratings.csv
-      random_seed: 0
-      file_delimiter: ","
-      skip_head: true
-
-    # prefiltering:
-    #   filter_users:
-    #     min_consumption: 50
-    #     num_users: 100
-    #   filter_items: 
-    #     min_ratings: 1
-    #     num_items: 100
-
-    splitting:
-      strategy: user_history
-      train_size: 0.8
-      test_consumes: 5
-
-    validation:
-      validation_size: 0.2
-
-
-'MovieLens 100k TrainTest':
-  SplitData:
-
-    dataset:
-      train:
-        path: ./data/datasets/MovieLens 100k TrainTest/train.data
-        file_delimiter: "::"
-        skip_head: false
-      test:
-        path: ./data/datasets/MovieLens 100k TrainTest/test.data
-        file_delimiter: "::"
-        skip_head: false
-
-    # validation:
-    #   x_validation: 
-    #     path: ./data/datasets/MovieLens 100k TrainTest/x_validation.csv
-    #     file_delimiter: "::"
-    #     skip_head: false
-    #   y_validation: 
-    #     path: ./data/datasets/MovieLens 100k TrainTest/y_validation.csv
-    #     file_delimiter: "::"
-    #     skip_head: false
-
-
-'Nano Dataset':
-  FullData:
-    
-    dataset:
-      path: ./data/datasets/Nano Dataset/ratings.csv
-      random_seed: 0
-      file_delimiter: ","
-      skip_head: true
-    
-    splitting:
-      strategy: temporal
-      train_size: 0.8
-      test_consumes: 1
-
-    validation:
-      validation_size: 0.2
-
-
-"MovieLens 1M":
-  FullData:
-
-    dataset:
-      path: ./data/datasets/MovieLens 1M/ratings.csv
-      random_seed: 0
-      file_delimiter: ","
-      skip_head: true
-
-    # prefiltering:
-    #   filter_users:
-    #     min_consumption: 50
-    #     num_users: 100
-    #   filter_items: 
-    #     min_ratings: 1
-    #     num_items: 100
-
-    splitting:
-      strategy: global
-      train_size: 0.8
-      test_consumes: 5
-
-    # validation:
-    #   validation_size: 0.2
-
-"MovieLens 10M":
-  FullData:
-    
-    dataset:
-      path: ./data/datasets/MovieLens 10M/ratings.csv
-      random_seed: 0
-      file_delimiter: ","
-      skip_head: true
-    
-    splitting:
-      strategy: temporal
-      train_size: 0.8
-      test_consumes: 5  
-
-    validation:
-      validation_size: 0.2
-
-"MovieLens 20M":
-  FullData:
-    
-    dataset:
-      path: ./data/datasets/MovieLens 20M/ratings.csv
-      random_seed: 0
-      file_delimiter: ","
-      skip_head: true
-    
-    splitting:
-      strategy: temporal
-      train_size: 0.8
-      test_consumes: 5  
-
-    validation:
-      validation_size: 0.2
-
-"LastFM 5k":
-  FullData:
-    
-    dataset:
-      path: ./data/datasets/LastFM 5k/ratings.csv
-      random_seed: 0
-      file_delimiter: ","
-      skip_head: true
-    
-    splitting:
-      strategy: temporal
-      train_size: 0.8
-      test_consumes: 5  
-
-    validation:
-      validation_size: 0.2
-
-"Kindle Store":
-  FullData:
-    
-    dataset:
-      path: ./data/datasets/Kindle Store/ratings.csv
-      random_seed: 0
-      file_delimiter: ","
-      skip_head: true
-    
-    splitting:
-      strategy: temporal
-      train_size: 0.8
-      test_consumes: 5  
-
-    validation:
-      validation_size: 0.2
-
-"Kindle 4k":
-  FullData:
-    dataset:
-      path: ./data/datasets/Kindle 4k/ratings.csv
-      random_seed: 0
-      file_delimiter: ","
-      skip_head: true
-    
-    splitting:
-      strategy: temporal
-      train_size: 0.8
-      test_consumes: 5  
-
-    validation:
-      validation_size: 0.2
-
-"Netflix":
-  FullData:
-    dataset:
-      path: ./data/datasets/Netflix/ratings.csv
-      random_seed: 0
-      file_delimiter: ","
-      skip_head: true
-      
-    splitting:
-      strategy: temporal
-      train_size: 0.8
-      test_consumes: 5  
-
-    validation:
-      validation_size: 0.2
-
-"Netflix 10k":
-  FullData:
-
     dataset:
       path: ./data/datasets/Netflix 10k/ratings.csv
       random_seed: 0
@@ -277,14 +23,14 @@
       skip_head: true
 
     splitting:
-      strategy: temporal
+      strategy: global
       train_size: 0.8
-      test_consumes: 5  
+      test_consumes: 5
 
     validation:
       validation_size: 0.2
 
-"Good Books":
+Good Books:
   FullData:
     dataset:
       path: ./data/datasets/Good Books/ratings.csv
@@ -293,103 +39,25 @@
       skip_head: true
     
     splitting:
-      strategy: temporal
+      strategy: global
       train_size: 0.8
-      test_consumes: 5  
+      test_consumes: 5
 
     validation:
       validation_size: 0.2
 
-"Yahoo Music":
-  FullData:
-    
-    dataset:
-      path: ./data/datasets/Yahoo Music/ratings.csv
-      random_seed: 0
-      file_delimiter: ","
-      skip_head: true
-    
-    splitting:
-      strategy: temporal
-      train_size: 0.8
-      test_consumes: 5  
-
-    validation:
-      validation_size: 0.2
-
-"Good Reads 10k":
-  FullData:    
-    
-    dataset:
-      path: ./data/datasets/Good Reads 10k/ratings.csv
-      random_seed: 0
-      file_delimiter: ","
-      skip_head: true
-    
-    splitting:
-      strategy: temporal
-      train_size: 0.8
-      test_consumes: 5  
-
-    validation:
-      validation_size: 0.2
-
-'Yahoo Music 5k':
-  FullData:
-    dataset:
-      path: ./data/datasets/Yahoo Music 5k/ratings.csv
-      random_seed: 0
-      file_delimiter: ","
-      skip_head: true
-    
-    splitting:
-      strategy: temporal
-      train_size: 0.8
-      test_consumes: 5  
-
-    validation:
-      validation_size: 0.2
-
-'Yahoo Music 10k':
+Yahoo Music 10k:
    FullData:
-
     dataset:
       path: ./data/datasets/Yahoo Music 10k/ratings.csv
       random_seed: 0
       file_delimiter: ","
       skip_head: true
 
-    # prefiltering:
-    #   filter_users:
-    #     min_consumption: 50
-    #     num_users: 100
-    #   filter_items: 
-    #     min_ratings: 1
-    #     num_items: 100
-
     splitting:
-      strategy: temporal
+      strategy: global
       train_size: 0.8
       test_consumes: 5
 
-    # validation:
-      # validation_size: 0.2
-
-    
-'MovieLens 25M':
-  FullData:
-    
-    dataset:
-      path: ./data/datasets/MovieLens 25M/ratings.csv
-      random_seed: 0
-      file_delimiter: ","
-      skip_head: true
-    
-    splitting:
-      strategy: temporal
-      train_size: 0.8
-      test_consumes: 5  
-
     validation:
       validation_size: 0.2
-      
