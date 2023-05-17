@@ -86,7 +86,7 @@ GridSearch:
       SimpleAgent:
         action_selection_policy:
           ASPEGreedy:
-            epsilon: linspace(0.001, 1, 5)
+            epsilon: linspace(0.01, 1, 10)
         value_function:
           LinearEGreedy:
             item_var: 0.01
@@ -100,7 +100,7 @@ GridSearch:
       SimpleAgent:
         action_selection_policy:
           ASPMismatchEgreedy:
-              epsilon: linspace(0.001, 1, 5)
+              epsilon: linspace(0.01, 1, 10)
               k: 0
         value_function:
           ContextualEgreedy:
@@ -115,7 +115,7 @@ GridSearch:
       SimpleAgent:
         action_selection_policy:
           ASPMismatchEgreedy:
-              epsilon: linspace(0.001, 1, 5)
+              epsilon: linspace(0.01, 1, 10)
               k: [5, 10, 20]
         value_function:
           ContextualEgreedy:
@@ -131,11 +131,11 @@ GridSearch:
           ASPGreedy: {}
         value_function:
           PTS:
-            num_lat: [10, 20]
+            num_lat: 20
             num_particles: [5, 10]
-            var: linspace(0.01, 0.5, 3)
+            var: 0.05
             var_u: linspace(0.01, 0.5, 3)
-            var_v: linspace(0.3, 5.0, 3)
+            var_v: 0.3
 
   - ContextualPTS_Te0:
       SimpleAgent:
@@ -144,11 +144,11 @@ GridSearch:
             k: 0
         value_function:
           ContextualPTS:
-            num_lat: [10, 20]
+            num_lat: 20
             num_particles: [5, 10]
-            var: linspace(0.01, 0.5, 3)
+            var: 0.05
             var_u: linspace(0.01, 0.5, 3)
-            var_v: linspace(0.3, 5.0, 3)
+            var_v: 0.3
 
   - ContextualPTS_Tge0:
       SimpleAgent:
@@ -157,11 +157,11 @@ GridSearch:
             k: [5, 10, 20]
         value_function:
           ContextualPTS:
-            num_lat: [10, 20]
+            num_lat: 20
             num_particles: [5, 10]
-            var: linspace(0.01, 0.5, 3)
+            var: 0.05
             var_u: linspace(0.01, 0.5, 3)
-            var_v: linspace(0.3, 5.0, 3)
+            var_v: 0.3
 
   - LinUCB:
       SimpleAgent:
@@ -169,8 +169,8 @@ GridSearch:
           ASPGreedy: {}
         value_function:
           LinUCB:
-            alpha: linspace(0.1, 1, 5)
-            num_lat: [5, 10, 20]
+            alpha: linspace(0.1, 1, 10)
+            num_lat: [10, 20]
 
   - ContextualLinUCB_Te0:
       SimpleAgent:
@@ -179,8 +179,8 @@ GridSearch:
             k: 0
         value_function:
           ContextualLinUCB:
-            alpha: linspace(0.1, 1, 5)
-            num_lat: [5, 10, 20]
+            alpha: linspace(0.1, 1, 10)
+            num_lat: [10, 20]
 
   - ContextualLinUCB_Tge0:
       SimpleAgent:
@@ -189,5 +189,5 @@ GridSearch:
             k: [5, 10, 20]
         value_function:
           ContextualLinUCB:
-            alpha: linspace(0.1, 1, 5)
-            num_lat: [5, 10, 20]
+            alpha: linspace(0.1, 1, 10)
+            num_lat: [10, 20]
